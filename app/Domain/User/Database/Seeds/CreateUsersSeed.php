@@ -23,6 +23,7 @@ class CreateUsersSeed extends Seeder
             'name'      => 'Administrator',
             'email'     => 'administrator',
             'password'  => Hash::make('12345678'),
+            'language'  => 'en_US'
         ]);
     }
 

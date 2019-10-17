@@ -16,7 +16,7 @@ use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
 
 /**
- * Class UsersDatabaseProvider
+ * Class InstitutionalsDatabaseProvider
  * @package App\Domain\User\Providers
  */
 class UsersDatabaseProvider extends ServiceProvider
