@@ -180,7 +180,7 @@ return [
         /*
          * Domain Service Providers
          * */
-       // \App\Domain\DomainsServiceProvider::class
+        \App\Domain\DomainsServiceProvider::class
 
     ],
 
