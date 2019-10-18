@@ -4,15 +4,15 @@
  * @date: 16/10/2019
  */
 
-namespace App\Domain\Institutional\Providers;
+namespace App\Domain\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class InstitutionalsServiceProvider
- * @package App\Domain\Institutional\Providers
+ * Class UsersServiceProvider
+ * @package App\Domain\User\Providers
  */
-class InstitutionalsServiceProvider extends ServiceProvider
+class UsersServiceProvider extends ServiceProvider
 {
 
     /**
@@ -25,22 +25,22 @@ class InstitutionalsServiceProvider extends ServiceProvider
         /*
          * Register Provider Database
          * */
-        $this->app->register(InstitutionalsDatabaseProvider::class);
+        $this->app->register(UsersDatabaseProvider::class);
 
         /*
          * Register Provider Repository
          * */
-        //$this->app->register(UsersRepositoryProvider::class);
+        $this->app->register(UsersRepositoryProvider::class);
 
         /*
          * Register Provider Views
          * */
-        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'institutionals');
+        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'users');
 
         /*
          * Register Provider Routes
          * */
-        $this->app->register(InstitutionalsRouteProvider::class);
+        $this->app->register(UsersRouteProvider::class);
     }
 
 }

@@ -104,7 +104,7 @@
 </body>
 
 </html>--}}
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -138,24 +138,18 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Safety Cubic</a>
+
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
+                @foreach($menu as $item)
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#{{$item['name']}}">{{$item['display_name']}}</a>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>
@@ -177,7 +171,7 @@
     </div>
 </header>
 
-<!-- About Section -->
+<!-- About Home -->
 <section class="page-section bg-primary" id="about">
     <div class="container">
         <div class="row justify-content-center">
@@ -346,6 +340,35 @@
         </div>
     </div>
 </section>
+
+
+    @component('core::components.creative-bootstrap.section', [
+        'id'               => 'home',
+        'additional_class' => 'bg-primary',
+    ])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">We've got what you need!</h2>
+                <hr class="divider light my-4">
+                <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+            </div>
+        </div>
+    @endcomponent
+
+
+    @include('institutionals::institutionals.sections.diretor')
+
+    @include('institutionals::institutionals.sections.cursos-livres')
+
+    @include('institutionals::institutionals.sections.consultoria')
+
+    @include('institutionals::institutionals.sections.publicacao')
+
+    @include('institutionals::institutionals.sections.clientes')
+
+    @include('institutionals::institutionals.sections.contato')
+
 
 <!-- Footer -->
 <footer class="bg-light py-5">
