@@ -40,3 +40,11 @@ Install dependencies from NPM.
 ```bash
 npm install
 ```
+
+### 5. WebPack
+
+Generate files dist to folder public
+
+```bash
+npm run development
+```
