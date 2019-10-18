@@ -1,7 +1,7 @@
 <?php
 
 
-Route::resource('/', 'Institutionals\InstitutionalController')->names([
+Route::resource('/', 'Institutional\InstitutionalController')->names([
     'index'  => 'users.index',
     'create' => 'users.create',
     'store'  => 'users.store',

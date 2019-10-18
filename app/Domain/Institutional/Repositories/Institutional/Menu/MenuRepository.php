@@ -5,27 +5,27 @@
  */
 namespace App\Domain\Institutional\Repositories\Institutional\Menu;
 
-use App\Domain\User\Entities\User;
+use App\Domain\Institutional\Entities\Menu;
 use \App\Support\Repository\AbstractRepository;
 
 /**
- * Class UserRepository
- * @package App\Domain\User\Repositories\Users
+ * Class MenuRepository
+ * @package App\Domain\Institutional\Repositories\Institutional\Menu
  */
 class MenuRepository extends AbstractRepository implements MenuInterface {
 
     /**
      * @var $menu
      */
-    protected $institutional;
+    protected $menu;
 
     /**
-     * InstitutionalRepository constructor.
-     * @param User $user
+     * MenuRepository constructor.
+     * @param Menu $menu
      */
-    public function __construct(User $user)
+    public function __construct(Menu $menu)
     {
-        $this->model = new AbstractRepository($user);
+        $this->model = new AbstractRepository($menu);
     }
 
     /**
@@ -33,44 +33,43 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
      */
     public function all()
     {
-        return $this->model->all();
-    }
-
-    /**
-     * @param array $array
-     * @return mixed
-     */
-    public function create(array $array)
-    {
-        return $this->model->create($array);
-    }
-
-    /**
-     * @param array $array
-     * @param $id
-     * @return mixed
-     */
-    public function update(array $array, $id)
-    {
-        return $this->model->update($array, $id);
-    }
-
-    /**
-     * @param $id
-     * @return \Illuminate\Database\Eloquent\Model|mixed
-     */
-    public function show($id)
-    {
-        return $this->model->show($id);
-    }
-
-    /**
-     * @param $id
-     * @return mixed
-     */
-    public function delete($id)
-    {
-        return $this->model->delete($id);
+        return [
+            [
+                'order'         => 1,
+                'name'          => 'home',
+                'display_name'  => trans('institutional::menu.home'),
+            ],
+            [
+                'order'         => 2,
+                'name'          => 'diretor',
+                'display_name'  => trans('institutional::menu.diretor'),
+            ],
+            [
+                'order'         => 3,
+                'name'          => 'cursos_livres',
+                'display_name'  => trans('institutional::menu.cursos_livres'),
+            ],
+            [
+                'order'         => 4,
+                'name'          => 'consultoria',
+                'display_name'  => trans('institutional::menu.consultoria'),
+            ],
+            [
+                'order'         => 5,
+                'name'          => 'publicacao',
+                'display_name'  => trans('institutional::menu.publicacao'),
+            ],
+            [
+                'order'         => 6,
+                'name'          => 'clientes',
+                'display_name'  => trans('institutional::menu.clientes'),
+            ],
+            [
+                'order'         => 7,
+                'name'          => 'contato',
+                'display_name'  => trans('institutional::menu.contato'),
+            ]
+        ];
     }
 
 }

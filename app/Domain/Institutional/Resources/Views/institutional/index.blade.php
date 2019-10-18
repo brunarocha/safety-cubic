@@ -117,19 +117,126 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Font Awesome Icons -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    {{--<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--}}
+    <link href="{{asset('themes/startbootstrap-creative/css/fontawesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+    {{--<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
+--}}
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    {{--<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">--}}
+    <link href="{{asset('themes/startbootstrap-creative/css/magnific-popup.css')}}" rel="stylesheet">
 
     <!-- Theme CSS - Includes Bootstrap -->
-    <link href="css/creative.min.css" rel="stylesheet">
-    <link href="{{asset('css/creative-bootstrap.css')}}" rel="stylesheet">
-    <script src="gulpfile.js"></script>
+    {{--<link href="css/creative.min.css" rel="stylesheet">--}}
+    <link href="{{asset('themes/startbootstrap-creative/css/creative.min.css')}}" rel="stylesheet">
+
+    {{--<link href="{{asset('css/creative-bootstrap.css')}}" rel="stylesheet">--}}
+    {{--<link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">--}}
+
+    {{--<script src="gulpfile.js"></script>--}}
+
+
+    <style>
+        /*nav ul ul {
+            display: none;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        !*nav {*!
+            !*margin: 0 auto;*!
+            !*text-align: center;*!
+        !*}*!
+        nav ul {
+            !*background: #efefef;*!
+            !*background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+            background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+            background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);*!
+            !*box-shadow: 0px 0px 9px rgba(0,0,0,0.15);*!
+            padding: 0 20px;
+            border-radius: 10px;
+            list-style: none;
+            position: relative;
+            display: inline-table;
+        }
+        nav ul:after {
+            content: ""; clear: both; display: block;
+        }
+
+        nav ul li {
+            float: left;
+        }
+        nav ul li:hover {
+            !*background: #4b545f;*!
+            !*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+            background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+            background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);*!
+        }
+        nav ul li:hover a {
+            color: #fff;
+        }
+
+        nav ul li a {
+            display: block; padding: 15px 20px;
+            color: #757575; text-decoration: none;
+        }
+
+        nav ul ul {
+           !* background: #5f6975; border-radius: 0px; padding: 0;*!
+            position: absolute; top: 100%;
+        }
+        nav ul ul li {
+            float: none;
+            border-top: 1px solid #6b727c;
+            border-bottom: 1px solid #575f6a; position: relative;
+        }
+        nav ul ul li a {
+            padding: 15px 20px;
+            color: #fff;
+        }
+        nav ul ul li a:hover {
+            !*background: #4b545f;*!
+        }
+
+        nav ul ul ul {
+            position: absolute; left: 100%; top:0;
+        }
+
+        @-webkit-keyframes suntrack {
+            from {
+                -webkit-transform:rotate(.25turn) translate3d(0px, 0px, 0px);
+            }
+            to {
+                -webkit-transform:rotate(-.75turn) translate3d(0px, 0px, 0px);
+            }
+        }
+        @keyframes suntrack {
+            from {
+                transform:rotate(.25turn) translate3d(0px, 0px, 0px);
+            }
+            to {
+                transform:rotate(-.75turn) translate3d(0px, 0px, 0px);
+            }
+        }
+        @-webkit-keyframes sunpulse {
+            from {
+                box-shadow:0 0 100px #ff0, 0 0 100px #ff0;
+            }
+            to {
+                box-shadow:0 0 50px #ff0, 0 0 75px #ff0;
+            }
+        }
+        @keyframes sunpulse {
+            from {
+                box-shadow:0 0 100px #ff0, 0 0 100px #ff0;
+            }
+            to {
+                box-shadow:0 0 50px #ff0, 0 0 75px #ff0;
+            }
+        }*/
+    </style>
 
 </head>
 
@@ -150,6 +257,15 @@
                         <a class="nav-link js-scroll-trigger" href="#{{$item['name']}}">{{$item['display_name']}}</a>
                     </li>
                 @endforeach
+
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">Teste</a>
+                    {{--<ul>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#">Teste</a>
+                        </li>
+                    </ul>--}}
+                </li>
             </ul>
         </div>
     </div>
@@ -357,17 +473,17 @@
     @endcomponent
 
 
-    @include('institutionals::institutionals.sections.diretor')
+    @include('institutional::institutional.sections.diretor')
 
-    @include('institutionals::institutionals.sections.cursos-livres')
+    @include('institutional::institutional.sections.cursos-livres')
 
-    @include('institutionals::institutionals.sections.consultoria')
+    @include('institutional::institutional.sections.consultoria')
 
-    @include('institutionals::institutionals.sections.publicacao')
+    @include('institutional::institutional.sections.publicacao')
 
-    @include('institutionals::institutionals.sections.clientes')
+    @include('institutional::institutional.sections.clientes')
 
-    @include('institutionals::institutionals.sections.contato')
+    @include('institutional::institutional.sections.contato')
 
 
 <!-- Footer -->
@@ -378,15 +494,18 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="{{asset('themes/startbootstrap-creative/js/jquery.min.js')}}"></script>
+<script src="{{asset('themes/startbootstrap-creative/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="{{asset('themes/startbootstrap-creative/js/jquery.easing.min.js')}}"></script>
+<script src="{{asset('themes/startbootstrap-creative/js/jquery.magnific-popup.min.js')}}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="js/creative.min.js"></script>
+<script src="{{asset('themes/startbootstrap-creative/js/creative.js')}}"></script>
+
 
 </body>
 

@@ -9,7 +9,7 @@
 
 
 {{--<section class="page-section" id="services">--}}
-<section class="page-section {{$additional_class}}" id="{{$id}}">
+<section class="page-section {{isset($additional_class) ? $additional_class : ''}}" id="{{$id}}">
     <div class="container">
         {{ $slot }}
     </div>

@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class InstitutionalsRouteProvider
+ * Class InstitutionalRouteProvider
  * @package App\Domain\Institutional\Providers
  */
-class InstitutionalsRouteProvider extends ServiceProvider
+class InstitutionalRouteProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.

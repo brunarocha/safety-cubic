@@ -9,7 +9,7 @@ namespace App\Domain\Institutional\Entities;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Role
+ * Class Company
  * @package App\Domain\Institutional\Entities
  */
 class Company extends Model
@@ -22,6 +22,8 @@ class Company extends Model
      */
     protected $fillable = [
         'name',
+        'register',
+        'fancy_name',
         'address',
         'address_number',
         'zip_code',

@@ -1,25 +1,25 @@
 <?php
 
-namespace App\Domain\User\Providers;
+namespace App\Domain\Institutional\Providers;
 
-use App\Domain\User\Repositories\Users\UserInterface;
-use App\Domain\User\Repositories\Users\UserRepository;
+use App\Domain\Institutional\Repositories\Institutional\Menu\MenuInterface;
+use App\Domain\Institutional\Repositories\Institutional\Menu\MenuRepository;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class UsersRepositoryProvider
- * @package App\Domain\User\Providers
+ * Class InstitutionalRepositoryProvider
+ * @package App\Domain\Institutional\Providers
  */
-class UsersRepositoryProvider extends ServiceProvider
+class InstitutionalRepositoryProvider extends ServiceProvider
 {
 
-    protected $namespace = 'App\Domain\User\Http\Controllers';
+    protected $namespace = 'App\Domain\Institutional\Http\Controllers';
 
     /**
      * Register Repositories for use in Controller
      */
     public function register()
     {
-        $this->app->bind(UserInterface::class, UserRepository::class);
+        $this->app->bind(MenuInterface::class, MenuRepository::class);
     }
 }

@@ -9,10 +9,10 @@ namespace App\Domain\Institutional\Entities;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class InstitutionalMenu
+ * Class Menu
  * @package App\Domain\Institutional\Entities
  */
-class InstitutionalMenu extends Model
+class Menu extends Model
 {
 
     /**

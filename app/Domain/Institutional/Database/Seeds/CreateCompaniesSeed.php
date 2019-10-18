@@ -19,9 +19,9 @@ class CreateCompaniesSeed extends Seeder
     public function run()
     {
         Company::create([
-            'company_register'   => '555.555.5555/55',
-            'company_name'       => 'Safety Cubic',
-            'company fancy name' => 'Safety Cubic',
+            'name'               => 'Safety Cubic',
+            'fancy_name'         => 'Safety Cubic',
+            'register'           => '555.555.5555/55',
             'address'            => 'Address',
             'address_number'     => 'Address Number',
             'zip_code'           => '69088920',

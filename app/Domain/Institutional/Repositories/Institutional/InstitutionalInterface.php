@@ -4,37 +4,18 @@
  * @date: 16/10/2019
  */
 
-namespace App\Domain\User\Repositories\Users;
+namespace App\Domain\Institutional\Repositories\Institutional;
 
 /**
- * Interface UserInterface
- * @package App\Domain\User\Repositories\Users
+ * Interface InstitutionalInterface
+ * @package App\Domain\Institutional\Repositories\Institutional
  */
-interface UserInterface {
+interface InstitutionalInterface {
 
     /**
      * @return mixed
      */
     public function all();
-
-    /**
-     * @param array $array
-     * @return mixed
-     */
-    public function create(array $array);
-
-    /**
-     * @param array $array
-     * @param $id
-     * @return mixed
-     */
-    public function update(array $array, $id);
-
-    /**
-     * @param $id
-     * @return mixed
-     */
-    public function show($id);
 
 
 }

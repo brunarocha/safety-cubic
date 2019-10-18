@@ -7,5 +7,11 @@
  */
 
 return [
-    'clientes' => 'Customers',
+    'home'          => 'Home',
+    'diretor'       => 'Director',
+    'cursos_livres' => 'Free Courses',
+    'consultoria'   => 'Consulting',
+    'publicacao'    => 'Publication',
+    'clientes'      => 'Customers',
+    'contato'       => 'Contact',
 ];

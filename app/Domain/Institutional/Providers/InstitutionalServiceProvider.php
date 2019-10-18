@@ -9,10 +9,10 @@ namespace App\Domain\Institutional\Providers;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class InstitutionalsServiceProvider
+ * Class InstitutionalServiceProvider
  * @package App\Domain\Institutional\Providers
  */
-class InstitutionalsServiceProvider extends ServiceProvider
+class InstitutionalServiceProvider extends ServiceProvider
 {
 
     /**
@@ -25,7 +25,7 @@ class InstitutionalsServiceProvider extends ServiceProvider
         /*
          * Register Provider Database
          * */
-        $this->app->register(InstitutionalsDatabaseProvider::class);
+        $this->app->register(InstitutionalDatabaseProvider::class);
 
         /*
          * Register Provider Repository
@@ -35,12 +35,12 @@ class InstitutionalsServiceProvider extends ServiceProvider
         /*
          * Register Provider Views
          * */
-        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'institutionals');
+        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'institutional');
 
         /*
          * Register Provider Routes
          * */
-        $this->app->register(InstitutionalsRouteProvider::class);
+        $this->app->register(InstitutionalRouteProvider::class);
 
         /*
          * Register Provider Translations

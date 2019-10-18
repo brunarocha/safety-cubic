@@ -3,7 +3,7 @@
  * @author: Bruna Rocha
  * @date: 16/10/2019
  */
-namespace App\Domain\User\Repositories\Users;
+namespace App\Domain\Institutional\Repositories\Institutional;
 
 use App\Domain\User\Entities\User;
 use \App\Support\Repository\AbstractRepository;
@@ -12,15 +12,15 @@ use \App\Support\Repository\AbstractRepository;
  * Class UserRepository
  * @package App\Domain\User\Repositories\Users
  */
-class UserRepository extends AbstractRepository implements UserInterface {
+class InstitutionalRepository extends AbstractRepository implements InstitutionalInterface {
 
     /**
-     * @var $user
+     * @var $institutional
      */
-    protected $user;
+    protected $institutional;
 
     /**
-     * UserRepository constructor.
+     * InstitutionalRepository constructor.
      * @param User $user
      */
     public function __construct(User $user)

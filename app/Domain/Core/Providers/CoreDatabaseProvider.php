@@ -2,21 +2,19 @@
 
 /**
  * @author: Bruna Rocha
- * @date: 16/10/2019
+ * @date: 18/10/2019
  */
 
 namespace App\Domain\Institutional\Providers;
 
-use App\Domain\Institucional\Database\Migrations\CreateCompaniesTable;
-use App\Domain\Institutional\Database\Seeds\CreateCompaniesSeed;
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
 
 /**
- * Class InstitutionalsDatabaseProvider
- * @package App\Domain\Institutional\Providers
+ * Class CoreDatabaseProvider
+ * @package App\Domain\Core\Providers
  */
-class InstitutionalsDatabaseProvider extends ServiceProvider
+class CoreDatabaseProvider extends ServiceProvider
 {
     use MigratorTrait;
 
@@ -28,11 +26,11 @@ class InstitutionalsDatabaseProvider extends ServiceProvider
     public function register()
     {
         $this->migrations([
-            CreateCompaniesTable::class
+
         ]);
 
         $this->seeders([
-            CreateCompaniesSeed::class
+
         ]);
     }
 }
