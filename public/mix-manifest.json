@@ -1,13 +1,14 @@
 {
     "/themes/startbootstrap-creative/js/bootstrap.bundle.min.js": "/themes/startbootstrap-creative/js/bootstrap.bundle.min.js",
     "/themes/startbootstrap-creative/js/bootstrap.min.js": "/themes/startbootstrap-creative/js/bootstrap.min.js",
-    "/themes/startbootstrap-creative/js/creative.js": "/themes/startbootstrap-creative/js/creative.js",
+    "/themes/startbootstrap-creative/js/creative.min.js": "/themes/startbootstrap-creative/js/creative.min.js",
     "/themes/startbootstrap-creative/js/jquery.easing.min.js": "/themes/startbootstrap-creative/js/jquery.easing.min.js",
     "/themes/startbootstrap-creative/js/jquery.magnific-popup.min.js": "/themes/startbootstrap-creative/js/jquery.magnific-popup.min.js",
     "/themes/startbootstrap-creative/js/jquery.min.js": "/themes/startbootstrap-creative/js/jquery.min.js",
+    "/themes/stisla/js/stisla.js": "/themes/stisla/js/stisla.js",
+    "/themes/stisla/js/template.js": "/themes/stisla/js/template.js",
     "/themes/startbootstrap-creative/css/creative.min.css": "/themes/startbootstrap-creative/css/creative.min.css",
     "/themes/startbootstrap-creative/css/magnific-popup.css": "/themes/startbootstrap-creative/css/magnific-popup.css",
     "/themes/startbootstrap-creative/css/fontawesome.min.css": "/themes/startbootstrap-creative/css/fontawesome.min.css",
-    "/themes/startbootstrap-creative/webfonts/fa-solid-900.woff2": "/themes/startbootstrap-creative/webfonts/fa-solid-900.woff2",
-    "/themes/startbootstrap-creative/webfonts/fa-solid-900.ttf": "/themes/startbootstrap-creative/webfonts/fa-solid-900.ttf"
+    "/themes/stisla/css/stisla.css": "/themes/stisla/css/stisla.css"
 }

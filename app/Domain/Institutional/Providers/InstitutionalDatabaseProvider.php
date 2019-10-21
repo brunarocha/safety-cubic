@@ -8,7 +8,9 @@
 namespace App\Domain\Institutional\Providers;
 
 use App\Domain\Institucional\Database\Migrations\CreateCompaniesTable;
+use App\Domain\Institucional\Database\Migrations\CreateInstitutionalVideosTable;
 use App\Domain\Institutional\Database\Seeds\CreateCompaniesSeed;
+use App\Domain\Institutional\Database\Seeds\CreateInstitutionalVideosSeed;
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
 
@@ -29,10 +31,12 @@ class InstitutionalDatabaseProvider extends ServiceProvider
     {
         $this->migrations([
             CreateCompaniesTable::class,
+            CreateInstitutionalVideosTable::class
         ]);
 
         $this->seeders([
             CreateCompaniesSeed::class,
+            CreateInstitutionalVideosSeed::class,
         ]);
     }
 }

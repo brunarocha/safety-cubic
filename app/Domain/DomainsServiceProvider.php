@@ -9,6 +9,8 @@
 namespace App\Domain;
 
 use App\Domain\Core\Providers\CoreServiceProvider;
+use App\Domain\Course\Providers\CourseDatabaseProvider;
+use App\Domain\Course\Providers\CourseServiceProvider;
 use App\Domain\Institutional\Providers\InstitutionalServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use App\Domain\User\Providers\UsersServiceProvider;
@@ -27,8 +29,9 @@ class DomainsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->register(UsersServiceProvider::class);
-        $this->app->register(InstitutionalServiceProvider::class);
         $this->app->register(CoreServiceProvider::class);
+        $this->app->register(InstitutionalServiceProvider::class);
+        $this->app->register(CourseServiceProvider::class);
     }
 
     /**

@@ -15,4 +15,7 @@ Route::get('/teste', function () {
         'show'   => 'users.show',
     ]);
 
+    Route::get('dashboard', 'Users\UserController@dashboard')->middleware('auth');
+
+
 //});

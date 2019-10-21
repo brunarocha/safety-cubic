@@ -33,42 +33,36 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
      */
     public function all()
     {
+        $items = $this->menusWithoutRoutes();
+        $menus = [];
+
+        foreach($items as $key => $value){
+            array_push($menus, [
+                'order'         => $key,
+                'url'           => '#'.$value,
+                'display_name'  => trans('institutional::menu.'.$value),
+            ]);
+        }
+
+        array_push($menus, [
+            'order'         => count($items)+1,
+            'url'           => route('login'),
+            'display_name'  => trans('institutional::menu.login'),
+        ]);
+
+        return $menus;
+    }
+
+    public function menusWithoutRoutes()
+    {
         return [
-            [
-                'order'         => 1,
-                'name'          => 'home',
-                'display_name'  => trans('institutional::menu.home'),
-            ],
-            [
-                'order'         => 2,
-                'name'          => 'diretor',
-                'display_name'  => trans('institutional::menu.diretor'),
-            ],
-            [
-                'order'         => 3,
-                'name'          => 'cursos_livres',
-                'display_name'  => trans('institutional::menu.cursos_livres'),
-            ],
-            [
-                'order'         => 4,
-                'name'          => 'consultoria',
-                'display_name'  => trans('institutional::menu.consultoria'),
-            ],
-            [
-                'order'         => 5,
-                'name'          => 'publicacao',
-                'display_name'  => trans('institutional::menu.publicacao'),
-            ],
-            [
-                'order'         => 6,
-                'name'          => 'clientes',
-                'display_name'  => trans('institutional::menu.clientes'),
-            ],
-            [
-                'order'         => 7,
-                'name'          => 'contato',
-                'display_name'  => trans('institutional::menu.contato'),
-            ]
+            'home',
+            'diretor',
+            'cursos_livres',
+            'consultoria',
+            'publicacao',
+            'clientes',
+            'contato',
         ];
     }
 

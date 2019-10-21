@@ -254,7 +254,7 @@
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
                 @foreach($menu as $item)
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#{{$item['name']}}">{{$item['display_name']}}</a>
+                        <a class="nav-link js-scroll-trigger" href="{{$item['url']}}">{{$item['display_name']}}</a>
                     </li>
                 @endforeach
 
@@ -287,7 +287,7 @@
     </div>
 </header>
 
-<!-- About Home -->
+{{--<!-- About Home -->
 <section class="page-section bg-primary" id="about">
     <div class="container">
         <div class="row justify-content-center">
@@ -455,10 +455,10 @@
             </div>
         </div>
     </div>
-</section>
+</section>--}}
 
 
-    @component('core::components.creative-bootstrap.section', [
+    @component('core::components.theme-creative-bootstrap.section', [
         'id'               => 'home',
         'additional_class' => 'bg-primary',
     ])
@@ -470,20 +470,97 @@
                 <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
             </div>
         </div>
+
+        <div class="row justify-content-center">
+            @foreach($videos as $video)
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">{{$video->url}}</h3>
+                        <p class="text-muted mb-0">{{$video->title}}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     @endcomponent
 
 
-    @include('institutional::institutional.sections.diretor')
+    {{--@include('institutional::institutional.sections.diretor')--}}
+    @component('core::components.theme-creative-bootstrap.section', ['id' => 'diretor'])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">{{trans('institutional::menu.diretor')}}</h2>
+                <hr class="divider my-4">
+                <p class="text-muted mb-5">{{trans('institutional::institutional.text_diretor')}}</p>
+            </div>
+        </div>
+    @endcomponent
 
-    @include('institutional::institutional.sections.cursos-livres')
+    {{--@include('institutional::institutional.sections.cursos-livres')--}}
+    @component('core::components.theme-creative-bootstrap.section', ['id' => 'cursos_livres'])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">{{trans('institutional::menu.cursos_livres')}}</h2>
+                <hr class="divider my-4">
+                <p class="text-muted mb-5">{{trans('institutional::institutional.text_cursos_livres')}}</p>
+            </div>
+        </div>
+    @endcomponent
 
-    @include('institutional::institutional.sections.consultoria')
+    {{--@include('institutional::institutional.sections.consultoria')--}}
+    @component('core::components.theme-creative-bootstrap.section', ['id' => 'consultoria'])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">{{trans('institutional::menu.consultoria')}}</h2>
+                <hr class="divider my-4">
+                <p class="text-muted mb-5">{{trans('institutional::institutional.text_consultoria')}}</p>
+            </div>
+        </div>
+    @endcomponent
 
-    @include('institutional::institutional.sections.publicacao')
+    {{--@include('institutional::institutional.sections.publicacao')--}}
+    @component('core::components.theme-creative-bootstrap.section', ['id' => 'publicacao'])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">{{trans('institutional::menu.publicacao')}}</h2>
+                <hr class="divider my-4">
+                <p class="text-muted mb-5">{{trans('institutional::institutional.text_publicacao')}}</p>
+            </div>
+        </div>
+    @endcomponent
 
-    @include('institutional::institutional.sections.clientes')
+    {{--@include('institutional::institutional.sections.clientes')--}}
+    @component('core::components.theme-creative-bootstrap.section', ['id' => 'clientes'])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">{{trans('institutional::menu.clientes')}}</h2>
+                <hr class="divider my-4">
+                <p class="text-muted mb-5">{{trans('institutional::institutional.text_diretor')}}</p>
+            </div>
+        </div>
+    @endcomponent
 
-    @include('institutional::institutional.sections.contato')
+    {{--@include('institutional::institutional.sections.contato')--}}
+    @component('core::components.theme-creative-bootstrap.section', ['id' => 'contato'])
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">Let's Get In Touch!</h2>
+                <hr class="divider my-4">
+                <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                <div>+1 (202) 555-0149</div>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                <!-- Make sure to change the email address in anchor text AND the link below! -->
+                <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+            </div>
+        </div>
+    @endcomponent
 
 
 <!-- Footer -->
@@ -494,8 +571,6 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-
-
 <script src="{{asset('themes/startbootstrap-creative/js/jquery.min.js')}}"></script>
 <script src="{{asset('themes/startbootstrap-creative/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -504,7 +579,7 @@
 <script src="{{asset('themes/startbootstrap-creative/js/jquery.magnific-popup.min.js')}}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="{{asset('themes/startbootstrap-creative/js/creative.js')}}"></script>
+<script src="{{asset('themes/startbootstrap-creative/js/creative.min.js')}}"></script>
 
 
 </body>

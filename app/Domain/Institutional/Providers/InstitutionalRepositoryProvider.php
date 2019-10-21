@@ -4,6 +4,8 @@ namespace App\Domain\Institutional\Providers;
 
 use App\Domain\Institutional\Repositories\Institutional\Menu\MenuInterface;
 use App\Domain\Institutional\Repositories\Institutional\Menu\MenuRepository;
+use App\Domain\Institutional\Repositories\Institutional\Video\InstitutionalVideoInterface;
+use App\Domain\Institutional\Repositories\Institutional\Video\InstitutionalVideoRepository;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -21,5 +23,6 @@ class InstitutionalRepositoryProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(MenuInterface::class, MenuRepository::class);
+        $this->app->bind(InstitutionalVideoInterface::class, InstitutionalVideoRepository::class);
     }
 }

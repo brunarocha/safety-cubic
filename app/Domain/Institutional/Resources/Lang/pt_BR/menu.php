@@ -14,4 +14,5 @@ return [
     'publicacao'    => 'Publicação',
     'clientes'      => 'Clientes',
     'contato'       => 'Contato',
+    'login'         => 'Entrar',
 ];

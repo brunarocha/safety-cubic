@@ -34,6 +34,11 @@ class UserController extends Controller {
         return view('users::users.index');
     }
 
+    public function dashboard()
+    {
+        return view('users::dashboard.index');
+    }
+
     public function create()
     {
 
