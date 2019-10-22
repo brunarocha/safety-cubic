@@ -9,10 +9,10 @@ namespace App\Domain\User\Providers;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class UsersServiceProvider
+ * Class UserServiceProvider
  * @package App\Domain\User\Providers
  */
-class UsersServiceProvider extends ServiceProvider
+class UserServiceProvider extends ServiceProvider
 {
 
     /**
@@ -25,22 +25,27 @@ class UsersServiceProvider extends ServiceProvider
         /*
          * Register Provider Database
          * */
-        $this->app->register(UsersDatabaseProvider::class);
+        $this->app->register(UserDatabaseProvider::class);
 
         /*
          * Register Provider Repository
          * */
-        $this->app->register(UsersRepositoryProvider::class);
+        $this->app->register(UserRepositoryProvider::class);
 
         /*
          * Register Provider Views
          * */
-        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'users');
+        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'user');
 
         /*
          * Register Provider Routes
          * */
-        $this->app->register(UsersRouteProvider::class);
+        $this->app->register(UserRouteProvider::class);
+
+        /*
+         * Register Provider Translations
+         * */
+        $this->loadTranslationsFrom(__DIR__.'/../Resources/Lang', 'user');
     }
 
 }

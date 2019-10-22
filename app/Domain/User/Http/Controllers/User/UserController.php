@@ -3,15 +3,15 @@
  * @author: Bruna Rocha
  * @date: 16/10/2019
  */
-namespace App\Domain\User\Http\Controllers\Users;
+namespace App\Domain\User\Http\Controllers\User;
 
-use App\Domain\User\Repositories\Users\UserInterface;
+use App\Domain\User\Repositories\User\UserInterface;
 use \App\Support\Http\Controller;
 use Illuminate\Http\Request;
 
 /**
  * Class UserController
- * @package App\Domain\User\Http\Controllers\Users
+ * @package App\Domain\User\Http\Controllers\User
  */
 class UserController extends Controller {
     /**
@@ -31,12 +31,12 @@ class UserController extends Controller {
 
     public function index()
     {
-        return view('users::users.index');
+        return view('user::user.index');
     }
 
     public function dashboard()
     {
-        return view('users::dashboard.index');
+        return view('user::dashboard.index');
     }
 
     public function create()

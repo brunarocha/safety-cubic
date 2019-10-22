@@ -77,6 +77,7 @@
 <script src="{{asset('themes/stisla/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/summernote/summernote-bs4.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/chocolat/dist/js/jquery.chocolat.min.js')}}"></script>
+<script src="{{asset('themes/stisla/modules/sweetalert/sweetalert.min.js')}}"></script>
 
 <!-- Template JS File -->
 <script src="{{asset('themes/stisla/js/template.js')}}"></script>

@@ -5,7 +5,7 @@
  * @date: 18/10/2019
  */
 
-namespace App\Domain\Institutional\Providers;
+namespace App\Domain\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;

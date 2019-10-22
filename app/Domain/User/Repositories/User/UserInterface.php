@@ -4,11 +4,11 @@
  * @date: 16/10/2019
  */
 
-namespace App\Domain\User\Repositories\Users;
+namespace App\Domain\User\Repositories\User;
 
 /**
  * Interface UserInterface
- * @package App\Domain\User\Repositories\Users
+ * @package App\Domain\User\Repositories\User
  */
 interface UserInterface {
 

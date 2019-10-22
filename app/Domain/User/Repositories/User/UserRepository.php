@@ -3,14 +3,14 @@
  * @author: Bruna Rocha
  * @date: 16/10/2019
  */
-namespace App\Domain\User\Repositories\Users;
+namespace App\Domain\User\Repositories\User;
 
 use App\Domain\User\Entities\User;
 use \App\Support\Repository\AbstractRepository;
 
 /**
  * Class UserRepository
- * @package App\Domain\User\Repositories\Users
+ * @package App\Domain\User\Repositories\User
  */
 class UserRepository extends AbstractRepository implements UserInterface {
 

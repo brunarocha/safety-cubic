@@ -1,21 +1,33 @@
 <?php
 
-Route::get('/teste', function () {
-    return view('welcome');
-});
-
-//Route::middleware(['auth'])->group(function () {
-
-    Route::resource('users', 'Users\UserController')->names([
-        'index'  => 'users.index',
-        'create' => 'users.create',
-        'store'  => 'users.store',
-        'edit'   => 'users.edit',
-        'delete' => 'users.delete',
-        'show'   => 'users.show',
+    /*
+     * Login
+     * */
+    Route::resource('login', 'Auth\LoginController')->names([
+        'index'  => 'auth.login.index',
+        'store'  => 'auth.login.store',
     ]);
 
-    Route::get('dashboard', 'Users\UserController@dashboard')->middleware('auth');
+    Route::post('logout', 'Auth\LoginController@logout')->name('auth.logout');
+
+    Route::middleware(['auth'])->group(function () {
+
+        /*
+         * Dashboard
+         * */
+        Route::get('dashboard', 'User\UserController@dashboard');
 
 
-//});
+        /*
+         * Users
+         * */
+        Route::resource('users', 'User\UserController')->names([
+            'index'  => 'user.index',
+            'create' => 'user.create',
+            'store'  => 'user.store',
+            'edit'   => 'user.edit',
+            'delete' => 'user.delete',
+            'show'   => 'user.show',
+        ]);
+
+    });

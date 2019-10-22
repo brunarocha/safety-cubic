@@ -16,10 +16,10 @@ use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
 
 /**
- * Class InstitutionalsDatabaseProvider
+ * Class UserDatabaseProvider
  * @package App\Domain\User\Providers
  */
-class UsersDatabaseProvider extends ServiceProvider
+class UserDatabaseProvider extends ServiceProvider
 {
     use MigratorTrait;
 

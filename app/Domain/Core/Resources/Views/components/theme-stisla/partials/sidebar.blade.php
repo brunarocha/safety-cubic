@@ -27,23 +27,23 @@
 
             {{-- Menu Institucional --}}
             @component('core::components.theme-stisla.menus.li-dropdown', [
-                'title'      => 'Institucional',
+                'title'      => trans('core::menu.label_institutional'),
                 'icon_class' => 'far fa-file-alt',
                 'links'      => [
-                    'Site'   => '#',
-                    'Videos' => '#',
-                    'Cursos' => '#',
+                    trans('core::menu.label_site')      => '#',
+                    trans('core::menu.label_videos')    => '#',
+                    trans('core::menu.label_courses')   => '#',
                 ]
             ]) @endcomponent
 
             {{-- Menu Cadastros --}}
             @component('core::components.theme-stisla.menus.li-dropdown', [
-                'title'      => 'Cadastros',
+                'title'      => trans('core::menu.label_registers'),
                 'icon_class' => 'far fa-file-alt',
                 'links'      => [
-                    'Cursos'      => '#',
-                    'Instrutores' => '#',
-                    'Alunos'      => '#',
+                    trans('core::menu.label_courses')     => '#',
+                    trans('core::menu.label_instructors') => '#',
+                    trans('core::menu.label_students')    => '#',
                 ]
             ]) @endcomponent
 

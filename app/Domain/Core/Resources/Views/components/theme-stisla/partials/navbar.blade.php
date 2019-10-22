@@ -135,14 +135,18 @@
                 </div>
             </div>
         </li>
-        <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            @if(auth()->user()->picture)
-                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            @else
-                <figure class="avatar mr-2 avatar-sm bg-warning text-white" data-initial="AD"></figure>
-            @endif
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                @if(auth()->user()->picture)
+                    <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                @else
+                    <figure class="avatar mr-2 avatar-sm bg-warning text-white" data-initial="AD"></figure>
+                @endif
 
-            <div class="d-sm-none d-lg-inline-block">Hi, {{auth()->user()->name}}</div></a>
+                <div class="d-sm-none d-lg-inline-block">
+                    {{trans('user::dashboard.label_hi')}}, {{auth()->user()->name}}
+                </div>
+            </a>
 
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
@@ -156,9 +160,16 @@
                     <i class="fas fa-cog"></i> Settings
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item has-icon text-danger">
+                <a class="dropdown-item has-icon text-danger"
+                   href="{{ route('auth.logout') }}"
+                   onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
+
+                <form id="logout-form" action="{{ route('auth.logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </li>
     </ul>

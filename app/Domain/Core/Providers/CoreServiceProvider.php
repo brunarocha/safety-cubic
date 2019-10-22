@@ -25,7 +25,7 @@ class CoreServiceProvider extends ServiceProvider
         /*
          * Register Provider Database
          * */
-        //$this->app->register(UsersDatabaseProvider::class);
+        $this->app->register(CoreDatabaseProvider::class);
 
         /*
          * Register Provider Repository
@@ -40,7 +40,12 @@ class CoreServiceProvider extends ServiceProvider
         /*
          * Register Provider Routes
          * */
-        //$this->app->register(UsersRouteProvider::class);
+        $this->app->register(CoreRouteProvider::class);
+
+        /*
+         * Register Provider Translations
+         * */
+        $this->loadTranslationsFrom(__DIR__.'/../Resources/Lang', 'core');
     }
 
 }

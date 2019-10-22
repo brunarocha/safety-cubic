@@ -2,15 +2,15 @@
 
 namespace App\Domain\User\Providers;
 
-use App\Domain\User\Repositories\Users\UserInterface;
-use App\Domain\User\Repositories\Users\UserRepository;
+use App\Domain\User\Repositories\User\UserInterface;
+use App\Domain\User\Repositories\User\UserRepository;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class UsersRepositoryProvider
  * @package App\Domain\User\Providers
  */
-class UsersRepositoryProvider extends ServiceProvider
+class UserRepositoryProvider extends ServiceProvider
 {
 
     protected $namespace = 'App\Domain\User\Http\Controllers';
