@@ -833,6 +833,23 @@
                     </div>
                     <div class="card-body">
                         59
+                        @role('administrator')
+                        <div class="card-stats-items">
+                            <div class="card-stats-item">
+                                <div class="card-stats-item-count">24</div>
+                                <div class="card-stats-item-label">Pending</div>
+                            </div>
+                            <div class="card-stats-item">
+                                <div class="card-stats-item-count">12</div>
+                                <div class="card-stats-item-label">Shipping</div>
+                            </div>
+                            <div class="card-stats-item">
+                                <div class="card-stats-item-count">23</div>
+                                <div class="card-stats-item-label">Completed</div>
+                            </div>
+                        </div>
+
+                        @endrole
                     </div>
                 </div>
             </div>

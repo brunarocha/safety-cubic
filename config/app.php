@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    //'name' => env('APP_NAME', 'Laravel'),
+    'name' => 'Safety Cubic',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,7 +181,12 @@ return [
         /*
          * Domain Service Providers
          * */
-        \App\Domain\DomainsServiceProvider::class
+        \App\Domain\DomainsServiceProvider::class,
+
+        /*
+         * Permission Service Provider
+         * */
+        \App\Domain\User\Providers\PermissionServiceProvider::class
 
     ],
 

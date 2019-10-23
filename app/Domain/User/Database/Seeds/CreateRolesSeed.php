@@ -6,7 +6,7 @@
 
 namespace App\Domain\User\Database\Seeds;
 
-use App\Domain\User\Entities\Role;
+use App\Domain\User\Entities\User\Role;
 use Illuminate\Database\Seeder;
 
 /**

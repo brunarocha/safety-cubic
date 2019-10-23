@@ -1,4 +1,4 @@
-{{--
+{{-- Example
 @component('core::components.theme-stisla.alerts.sweetalert') @endcomponent
 --}}
 

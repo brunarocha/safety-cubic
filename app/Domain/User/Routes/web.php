@@ -10,6 +10,9 @@
 
     Route::post('logout', 'Auth\LoginController@logout')->name('auth.logout');
 
+    Route::get('register', 'User\UserController@create');
+
+
     Route::middleware(['auth'])->group(function () {
 
         /*
@@ -22,12 +25,12 @@
          * Users
          * */
         Route::resource('users', 'User\UserController')->names([
-            'index'  => 'user.index',
+            'index'     => 'user.index',
             'create' => 'user.create',
-            'store'  => 'user.store',
-            'edit'   => 'user.edit',
-            'delete' => 'user.delete',
-            'show'   => 'user.show',
+            'store'     => 'user.store',
+            'edit'      => 'user.edit',
+            'delete'    => 'user.delete',
+            'show'      => 'user.show',
         ]);
 
     });

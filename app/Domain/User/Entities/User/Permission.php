@@ -1,18 +1,18 @@
 <?php
 /**
  * @author: Bruna Rocha
- * @date: 16/10/2019
+ * @date: 22/10/2019
  */
 
-namespace App\Domain\User\Entities;
+namespace App\Domain\User\Entities\User;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Role
- * @package App\Domain\User\Entities
+ * Class Permission
+ * @package App\Domain\User\Entities\User
  */
-class Role extends Model
+class Permission extends Model
 {
 
     /**
@@ -32,5 +32,10 @@ class Role extends Model
     protected $hidden = [
     ];
 
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'roles_permissions');
+    }
 
 }

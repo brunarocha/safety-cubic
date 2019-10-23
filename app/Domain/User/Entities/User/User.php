@@ -4,19 +4,20 @@
  * @date: 16/10/2019
  */
 
-namespace App\Domain\User\Entities;
+namespace App\Domain\User\Entities\User;
 
+use App\Domain\User\Traits\PermissionsTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 /**
  * Class User
- * @package App\Domain\User\Entities
+ * @package App\Domain\User\Entities\User
  */
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, PermissionsTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -44,4 +45,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'users_roles');
+    }
 }

@@ -1,4 +1,4 @@
-{{--
+{{-- Example
 @component('core::components.theme-stisla.menus.li-dropdown', [
     'title'       => 'Cadastros',
     'icon_class'  => 'far fa-file-alt',

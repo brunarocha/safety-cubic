@@ -41,7 +41,8 @@ class UserController extends Controller {
 
     public function create()
     {
-
+        dd(auth()->user()->hasRole('list'));
+        return view('user::user.create');
     }
 
     public function store(Request $request)

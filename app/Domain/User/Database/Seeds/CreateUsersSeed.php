@@ -7,7 +7,7 @@
 namespace App\Domain\User\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use App\Domain\User\Entities\User;
+use App\Domain\User\Entities\User\User;
 use Illuminate\Support\Facades\Hash;
 
 /**

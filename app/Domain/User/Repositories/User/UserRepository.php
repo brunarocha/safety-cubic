@@ -5,7 +5,7 @@
  */
 namespace App\Domain\User\Repositories\User;
 
-use App\Domain\User\Entities\User;
+use App\Domain\User\Entities\User\User;
 use \App\Support\Repository\AbstractRepository;
 
 /**
