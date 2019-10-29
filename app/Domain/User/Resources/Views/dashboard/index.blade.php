@@ -833,7 +833,7 @@
                     </div>
                     <div class="card-body">
                         59
-                        @role('administrator')
+                        {{--@role('administrator')
                         <div class="card-stats-items">
                             <div class="card-stats-item">
                                 <div class="card-stats-item-count">24</div>
@@ -849,7 +849,7 @@
                             </div>
                         </div>
 
-                        @endrole
+                        @endrole--}}
                     </div>
                 </div>
             </div>

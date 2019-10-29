@@ -30,7 +30,7 @@ DB_PASSWORD=XXXXX
 Create the database for project before run artisan command.
 
 ```bash
-php artisan migrate:fresh --seed
+php artisan migrator:fresh --seed
 ```
 
 ### 4. Dependencies

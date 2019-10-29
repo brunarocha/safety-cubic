@@ -8,11 +8,15 @@
 
 return [
     'home'          => 'Início',
-    'diretor'       => 'Diretor',
-    'cursos_livres' => 'Cursos Livres',
-    'consultoria'   => 'Consultoria',
-    'publicacao'    => 'Publicação',
-    'clientes'      => 'Clientes',
-    'contato'       => 'Contato',
+    'about'         => 'Sobre Nós',
+    'director'      => 'Diretor',
+    'free_courses'  => 'Cursos Livres',
+    'consulting'    => 'Consultoria',
+    'publication'   => 'Publicações',
+    'clients'       => 'Clientes',
+    'contact'       => 'Contato',
     'login'         => 'Entrar',
+    'testimonials'  => 'Depoimentos',
+    'our_team'      => 'Nosso Time',
+    'contact_us'    => 'Contato',
 ];

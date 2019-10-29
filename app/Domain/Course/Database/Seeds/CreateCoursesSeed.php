@@ -19,11 +19,35 @@ class CreateCoursesSeed extends Seeder
     public function run()
     {
         Course::create([
-            'name' => 'Curso Teste',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum odio a ipsum mattis, ac maximus tellus condimentum. Curabitur scelerisque at nibh ac lacinia. Sed ac libero eleifend, feugiat neque sit amet, iaculis lectus. Duis diam risus, facilisis ac mi at, sagittis tincidunt urna. Donec imperdiet tempor risus, quis pretium felis maximus a. Sed ut odio mauris. Etiam quis felis hendrerit, eleifend sapien eget, semper tellus. Morbi a pretium purus.',
-            'picture' => null,
-            'value' => 1920.00,
+            'name'        => 'Qualidade',
+            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            //'picture'     => 'fa fa-bar-chart',
+            'picture'     => 'fa fa-line-chart',
+            'value'       => 0.0,
         ]);
+
+        Course::create([
+            'name'        => 'Meio Ambiente',
+            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            //'picture'     => 'fa fa-picture-o',
+            'picture'     => 'fa fa-tree',
+            'value'       => 0.0,
+        ]);
+
+        Course::create([
+            'name'        => 'Saúde Ocupacional',
+            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'picture'     => 'fa fa-plus-square',
+            'value'       => 0.0,
+        ]);
+
+        Course::create([
+            'name'        => 'Segurança Patrimonial',
+            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'picture'     => 'fa fa-shield',
+            'value'       => 0.0,
+        ]);
+
     }
 
 }

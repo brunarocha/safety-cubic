@@ -46,6 +46,11 @@ class UserServiceProvider extends ServiceProvider
          * Register Provider Translations
          * */
         $this->loadTranslationsFrom(__DIR__.'/../Resources/Lang', 'user');
+
+        /*
+         * Register Provider Permissions
+         * */
+        $this->app->register(PermissionServiceProvider::class);
     }
 
 }

@@ -44,11 +44,11 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
             ]);
         }
 
-        array_push($menus, [
+        /*array_push($menus, [
             'order'         => count($items)+1,
             'url'           => route('auth.login.index'),
             'display_name'  => trans('institutional::menu.login'),
-        ]);
+        ]);*/
 
         return $menus;
     }
@@ -57,12 +57,13 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
     {
         return [
             'home',
-            'diretor',
-            'cursos_livres',
-            'consultoria',
-            'publicacao',
-            'clientes',
-            'contato',
+            'about',
+            'director',
+            //'free_courses',
+            'consulting',
+            'publication',
+            //'clients',
+            'contact',
         ];
     }
 

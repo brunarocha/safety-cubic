@@ -5,6 +5,7 @@
  */
 namespace App\Domain\Institutional\Http\Controllers\Institutional;
 
+use App\Domain\Course\Repositories\CourseInterface;
 use App\Domain\Institutional\Repositories\Institutional\Menu\MenuInterface;
 use App\Domain\Institutional\Repositories\Institutional\Video\InstitutionalVideoInterface;
 use \App\Support\Http\Controller;
@@ -18,31 +19,41 @@ class InstitutionalController extends Controller {
     /**
      * @var MenuInterface
      * @var InstitutionalVideoInterface
+     * @var CourseInterface
      */
     protected $menus;
     protected $videos;
+    protected $courses;
 
     /**
      * InstitutionalController constructor.
      * @param MenuInterface $menuInterface
      * @param InstitutionalVideoInterface $videoInterface
+     * @param CourseInterface $courseInterface
      */
 
     public function __construct(
         MenuInterface $menuInterface,
-        InstitutionalVideoInterface $videoInterface
+        InstitutionalVideoInterface $videoInterface,
+        CourseInterface $courseInterface
     )
     {
-        $this->menus  = $menuInterface;
-        $this->videos = $videoInterface;
+        $this->menus    = $menuInterface;
+        $this->videos   = $videoInterface;
+        $this->courses  = $courseInterface;
     }
 
     public function index()
     {
-        $menu   = $this->menus->all();
-        $videos = $this->videos->all();
+        $menus      = $this->menus->all();
+        $videos     = $this->videos->all();
+        $courses    = $this->courses->all();
 
-        return view('institutional::institutional.index')->with(['menu' => $menu, 'videos' => $videos]);
+        return view('institutional::institutional.inde')->with([
+            'menus'     => $menus,
+            'videos'    => $videos,
+            'courses'   => $courses
+        ]);
     }
 
     public function create()

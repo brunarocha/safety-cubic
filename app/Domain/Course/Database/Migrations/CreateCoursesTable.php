@@ -29,6 +29,7 @@ class CreateCoursesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
+            $table->string('icon')->nullable();
             $table->string('picture')->nullable();
             $table->decimal('value', 10, 2)->nullable();
 

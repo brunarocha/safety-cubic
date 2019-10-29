@@ -186,7 +186,7 @@ return [
         /*
          * Permission Service Provider
          * */
-        \App\Domain\User\Providers\PermissionServiceProvider::class
+        /*\App\Domain\User\Providers\PermissionServiceProvider::class*/
 
     ],
 
