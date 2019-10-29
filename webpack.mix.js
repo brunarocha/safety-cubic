@@ -40,6 +40,7 @@ mix.styles([paths.themes.creative.dev+'/css/creative.min.css'], paths.themes.cre
 /* Theme Creative Fonts */
 mix.styles([paths.themes.creative.dev+'/vendor/fontawesome-free/css/*.css'], paths.themes.creative.dist+'/css/fontawesome.min.css');
 mix.copyDirectory(paths.themes.creative.dev+'/vendor/fontawesome-free/webfonts/', paths.themes.creative.dist+'/webfonts/');
+mix.copyDirectory(paths.themes.creative.dev+'/img', paths.themes.creative.dist+'/img/');
 
 
 /*

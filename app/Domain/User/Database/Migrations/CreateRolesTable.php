@@ -7,7 +7,7 @@
 namespace App\Domain\User\Database\Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
+use App\Support\Domain\Migration;
 
 /**
  * Class CreateRolesTable
@@ -15,10 +15,6 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateRolesTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
 
     protected $table = 'roles';
 

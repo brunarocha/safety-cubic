@@ -114,7 +114,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>{{config('app.name')}}</title>
 
     <!-- Font Awesome Icons -->
     {{--<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--}}
@@ -236,6 +236,9 @@
                 box-shadow:0 0 50px #ff0, 0 0 75px #ff0;
             }
         }*/
+        /*.masthead {
+            background: white;
+        }*/
     </style>
 
 </head>
@@ -245,7 +248,9 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Safety Cubic</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">{{--Safety Cubic--}}
+            <img src="{{asset('themes/startbootstrap-creative/img/logo.png')}}">
+        </a>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -254,25 +259,16 @@
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
                 @foreach($menu as $item)
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{{$item['url']}}">{{$item['display_name']}}</a>
+                        <a class="nav-link js-scroll-trigger" href="{{$item['url']}}" style="color: #000000">{{$item['display_name']}}</a>
                     </li>
                 @endforeach
-
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#">Teste</a>
-                    {{--<ul>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#">Teste</a>
-                        </li>
-                    </ul>--}}
-                </li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Masthead -->
-<header class="masthead">
+<header class="masthead" {{--style="background: #8fa1b3;"--}}>
     <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end">

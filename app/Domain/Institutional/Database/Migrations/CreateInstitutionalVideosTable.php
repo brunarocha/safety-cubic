@@ -7,8 +7,8 @@
 
 namespace App\Domain\Institucional\Database\Migrations;
 
+use App\Support\Domain\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class CreateInstitutionalVideosTable
@@ -16,10 +16,7 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateInstitutionalVideosTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
+
     protected $table = 'institutional_videos';
 
     /**

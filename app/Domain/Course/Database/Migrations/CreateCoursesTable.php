@@ -7,8 +7,8 @@
 
 namespace App\Domain\Course\Database\Migrations;
 
+use App\Support\Domain\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class CreateCoursesTable
@@ -16,10 +16,6 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateCoursesTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
     protected $table = 'courses';
 
     /**

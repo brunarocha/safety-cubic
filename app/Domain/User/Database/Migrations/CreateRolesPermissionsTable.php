@@ -7,7 +7,7 @@
 namespace App\Domain\User\Database\Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
+use App\Support\Domain\Migration;
 
 /**
  * Class CreateRolesPermissionsTable
@@ -15,10 +15,6 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateRolesPermissionsTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
 
     protected $table = 'roles_permissions';
 
@@ -29,8 +25,7 @@ class CreateRolesPermissionsTable extends Migration
      */
     public function up()
     {
-        //$this->schema->create($this->table, function (Blueprint $table) {
-        $this->schema->create('roles_permissions', function (Blueprint $table) {
+        $this->schema->create($this->table, function (Blueprint $table) {
             $table->unsignedInteger('role_id');
             $table->unsignedInteger('permission_id');
 
@@ -50,6 +45,6 @@ class CreateRolesPermissionsTable extends Migration
      */
     public function down()
     {
-        $this->schema->drop('roles_permissions');
+        $this->schema->drop($this->table);
     }
 }

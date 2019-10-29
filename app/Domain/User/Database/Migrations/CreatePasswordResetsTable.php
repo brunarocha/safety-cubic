@@ -7,8 +7,8 @@
 
 namespace App\Domain\User\Database\Migrations;
 
+use App\Support\Domain\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class CreatePasswordResetsTable
@@ -16,10 +16,7 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreatePasswordResetsTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
+
     protected $table = 'password_resets';
 
     /**

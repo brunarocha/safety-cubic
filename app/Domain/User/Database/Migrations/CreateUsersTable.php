@@ -8,7 +8,7 @@
 namespace App\Domain\User\Database\Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
+use App\Support\Domain\Migration;
 
 /**
  * Class CreateUsersTable
@@ -16,10 +16,7 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateUsersTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
+
     protected $table = 'users';
 
     /**
