@@ -6,7 +6,10 @@
 namespace App\Domain\Institutional\Http\Controllers\Institutional;
 
 use App\Domain\Course\Repositories\CourseInterface;
+use App\Domain\Company\Repositories\Company\CompanyInterface;
+use App\Domain\Institutional\Repositories\Institutional\InstitutionalInterface;
 use App\Domain\Institutional\Repositories\Institutional\Menu\MenuInterface;
+use App\Domain\Institutional\Repositories\Institutional\Testimonial\TestimonialInterface;
 use App\Domain\Institutional\Repositories\Institutional\Video\InstitutionalVideoInterface;
 use \App\Support\Http\Controller;
 use Illuminate\Http\Request;
@@ -19,40 +22,54 @@ class InstitutionalController extends Controller {
     /**
      * @var MenuInterface
      * @var InstitutionalVideoInterface
+     * @var InstitutionalInterface
      * @var CourseInterface
+     * @var TestimonialInterface
+     * @var CompanyInterface
      */
     protected $menus;
+    protected $institutional;
     protected $videos;
     protected $courses;
+    protected $testimonials;
+    protected $company;
 
     /**
      * InstitutionalController constructor.
      * @param MenuInterface $menuInterface
+     * @param InstitutionalInterface $institutionalInterface
      * @param InstitutionalVideoInterface $videoInterface
      * @param CourseInterface $courseInterface
+     * @param TestimonialInterface $testimonialInterface
+     * @param CompanyInterface $companyInterface
      */
 
     public function __construct(
         MenuInterface $menuInterface,
+        InstitutionalInterface $institutionalInterface,
         InstitutionalVideoInterface $videoInterface,
-        CourseInterface $courseInterface
+        CourseInterface $courseInterface,
+        TestimonialInterface $testimonialInterface,
+        CompanyInterface $companyInterface
     )
     {
-        $this->menus    = $menuInterface;
-        $this->videos   = $videoInterface;
-        $this->courses  = $courseInterface;
+        $this->menus          = $menuInterface;
+        $this->videos         = $videoInterface;
+        $this->institutional  = $institutionalInterface;
+        $this->courses        = $courseInterface;
+        $this->testimonials   = $testimonialInterface;
+        $this->company        = $companyInterface;
     }
 
     public function index()
     {
-        $menus      = $this->menus->all();
-        $videos     = $this->videos->all();
-        $courses    = $this->courses->all();
-
-        return view('institutional::institutional.inde')->with([
-            'menus'     => $menus,
-            'videos'    => $videos,
-            'courses'   => $courses
+        return view('institutional::institutional.index')->with([
+            'menus'         => $this->menus->all(),
+            'videos'        => $this->videos->all(),
+            'courses'       => $this->courses->all(),
+            'company'       => $this->company->show(1),
+            'principles'    => $this->institutional->principles(),
+            'testimonials'  => $this->testimonials->all()
         ]);
     }
 

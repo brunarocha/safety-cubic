@@ -30,7 +30,8 @@
                 'title'      => trans('core::menu.label_institutional'),
                 'icon_class' => 'far fa-file-alt',
                 'links'      => [
-                    trans('core::menu.label_site')      => '#',
+                    //trans('core::menu.label_site')      => '#',
+                    trans('core::menu.label_company')   => route('company.edit', 1),
                     trans('core::menu.label_videos')    => '#',
                     trans('core::menu.label_courses')   => '#',
                 ]
@@ -41,13 +42,12 @@
                 'title'      => trans('core::menu.label_registers'),
                 'icon_class' => 'far fa-file-alt',
                 'links'      => [
-                    trans('core::menu.label_courses')     => '#',
                     trans('core::menu.label_instructors') => '#',
                     trans('core::menu.label_students')    => '#',
                 ]
             ]) @endcomponent
 
-            <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+           {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
                 <ul class="dropdown-menu">
@@ -158,12 +158,13 @@
                     <li><a class="nav-link" href="utilities-invoice.html">Invoice</a></li>
                     <li><a href="utilities-subscribe.html">Subscribe</a></li>
                 </ul>
-            </li>            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
+            </li>            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>--}}
         </ul>
 
-        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+        {{--<div class="mt-4 mb-4 p-3 hide-sidebar-mini">
             <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
                 <i class="fas fa-rocket"></i> Documentation
             </a>
-        </div>        </aside>
+        </div>   --}}
+    </aside>
 </div>

@@ -5,6 +5,7 @@
  */
 namespace App\Domain\Institutional\Repositories\Institutional;
 
+use App\Domain\Institutional\Entities\InstitutionalVideo;
 use App\Domain\User\Entities\User;
 use \App\Support\Repository\AbstractRepository;
 
@@ -23,9 +24,9 @@ class InstitutionalRepository extends AbstractRepository implements Institutiona
      * InstitutionalRepository constructor.
      * @param User $user
      */
-    public function __construct(User $user)
+    public function __construct(InstitutionalVideo $video)
     {
-        $this->model = new AbstractRepository($user);
+        $this->model = new AbstractRepository($video);
     }
 
     /**
@@ -37,40 +38,33 @@ class InstitutionalRepository extends AbstractRepository implements Institutiona
     }
 
     /**
-     * @param array $array
-     * @return mixed
+     * return Mission, Vision and Values
      */
-    public function create(array $array)
+    public function principles()
     {
-        return $this->model->create($array);
-    }
+        $items = [
+            'Ullamco laboris nisi ut aliquip ex ea commodo consequat',
+            'Duis aute irure dolor in reprehenderit in voluptate velit.',
+            'Ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        ];
 
-    /**
-     * @param array $array
-     * @param $id
-     * @return mixed
-     */
-    public function update(array $array, $id)
-    {
-        return $this->model->update($array, $id);
-    }
-
-    /**
-     * @param $id
-     * @return \Illuminate\Database\Eloquent\Model|mixed
-     */
-    public function show($id)
-    {
-        return $this->model->show($id);
-    }
-
-    /**
-     * @param $id
-     * @return mixed
-     */
-    public function delete($id)
-    {
-        return $this->model->delete($id);
+        return [
+            [
+                'title' => trans('institutional::institutional.mission'),
+                'text'  => trans('institutional::institutional.text_mission'),
+                'items' => $items,
+            ],
+            [
+                'title' => trans('institutional::institutional.vision'),
+                'text'  => trans('institutional::institutional.text_vision'),
+                'items' => $items,
+            ],
+            [
+                'title' => trans('institutional::institutional.values'),
+                'text'  => trans('institutional::institutional.text_values'),
+                'items' => $items,
+            ],
+        ];
     }
 
 }

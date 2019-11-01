@@ -1,583 +1,568 @@
-{{--
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Safety Cubic</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS - Includes Bootstrap -->
-    <link href="{{asset('css/creative-bootstrap.css')}}" rel="stylesheet">
-
-</head>
-
-<body>
-
-{{asset('css/cssall.css')}}
-{{asset('node_modules/startbootstrap-creative/css/creative.min.css')}}
-<a href="{{asset('node_modules/startbootstrap-creative/img/bg-masthead.jpg')}}">t</a>
-
-<div class="bg-info clearfix">
-    <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
-    <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
-</div>
-
-    <nav class="bg-primary">
-        <ul>
-            <li><a href="#">{{strtoupper('home')}}</a></li>
-            <li><a href="#diretor">{{strtoupper('diretor')}}</a></li>
-            <li><a href="#cursos-livres">{{strtoupper('cursos livres')}}</a></li>
-            <li><a href="#consultoria">{{strtoupper('consultoria')}}</a></li>
-            <li><a href="#publicacao">{{strtoupper('publicação')}}</a></li>
-            <li><a href="#contato">{{strtoupper('contato')}}</a></li>
-            <li><a href="#clientes">{{strtoupper('clientes')}}</a></li>
-        </ul>
-    </nav>
-
-
-    <section id="diretor">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tempor magna, vitae laoreet arcu. Vivamus non lectus quam. Nullam finibus tristique lectus, a aliquam ex rutrum vitae. Vivamus at laoreet arcu, sit amet auctor augue. Suspendisse non scelerisque ipsum. Donec eu sem ut eros facilisis viverra. Sed vitae vestibulum mauris. Pellentesque pellentesque pretium metus, vitae lacinia massa imperdiet vitae. Nam consequat, odio a tincidunt lobortis, libero nisi porttitor odio, eget imperdiet libero lorem et eros. Suspendisse potenti. Aenean a hendrerit mauris. Mauris malesuada dolor sed ligula aliquam, non pretium justo vehicula. Quisque pulvinar tellus et nunc commodo, eget tristique nibh tempus. Fusce ac tempor enim. Ut fermentum condimentum orci, in feugiat felis.v
-            Quisque ut mi tincidunt nulla imperdiet feugiat. Nullam pulvinar lacinia lectus, nec pharetra ex pellentesque viverra. Aliquam gravida mollis tincidunt. Duis est lacus, molestie id massa a, aliquam consectetur nisi. Fusce varius ex in mi venenatis, a molestie mauris sollicitudin. Curabitur ultricies felis lorem, a aliquam felis elementum varius. Aenean eu justo vitae est hendrerit imperdiet a sed ipsum. Pellentesque a diam nec metus tempor dapibus. Donec maximus metus tincidunt fermentum tempus.
-        </p>
-    </section>
-
-    <section id="cursos-livres">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tempor magna, vitae laoreet arcu. Vivamus non lectus quam. Nullam finibus tristique lectus, a aliquam ex rutrum vitae. Vivamus at laoreet arcu, sit amet auctor augue. Suspendisse non scelerisque ipsum. Donec eu sem ut eros facilisis viverra. Sed vitae vestibulum mauris. Pellentesque pellentesque pretium metus, vitae lacinia massa imperdiet vitae. Nam consequat, odio a tincidunt lobortis, libero nisi porttitor odio, eget imperdiet libero lorem et eros. Suspendisse potenti. Aenean a hendrerit mauris. Mauris malesuada dolor sed ligula aliquam, non pretium justo vehicula. Quisque pulvinar tellus et nunc commodo, eget tristique nibh tempus. Fusce ac tempor enim. Ut fermentum condimentum orci, in feugiat felis.
-            Quisque ut mi tincidunt nulla imperdiet feugiat. Nullam pulvinar lacinia lectus, nec pharetra ex pellentesque viverra. Aliquam gravida mollis tincidunt. Duis est lacus, molestie id massa a, aliquam consectetur nisi. Fusce varius ex in mi venenatis, a molestie mauris sollicitudin. Curabitur ultricies felis lorem, a aliquam felis elementum varius. Aenean eu justo vitae est hendrerit imperdiet a sed ipsum. Pellentesque a diam nec metus tempor dapibus. Donec maximus metus tincidunt fermentum tempus.
-        </p>
-    </section>
-
-    <section id="consultoria">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tempor magna, vitae laoreet arcu. Vivamus non lectus quam. Nullam finibus tristique lectus, a aliquam ex rutrum vitae. Vivamus at laoreet arcu, sit amet auctor augue. Suspendisse non scelerisque ipsum. Donec eu sem ut eros facilisis viverra. Sed vitae vestibulum mauris. Pellentesque pellentesque pretium metus, vitae lacinia massa imperdiet vitae. Nam consequat, odio a tincidunt lobortis, libero nisi porttitor odio, eget imperdiet libero lorem et eros. Suspendisse potenti. Aenean a hendrerit mauris. Mauris malesuada dolor sed ligula aliquam, non pretium justo vehicula. Quisque pulvinar tellus et nunc commodo, eget tristique nibh tempus. Fusce ac tempor enim. Ut fermentum condimentum orci, in feugiat felis.
-            Quisque ut mi tincidunt nulla imperdiet feugiat. Nullam pulvinar lacinia lectus, nec pharetra ex pellentesque viverra. Aliquam gravida mollis tincidunt. Duis est lacus, molestie id massa a, aliquam consectetur nisi. Fusce varius ex in mi venenatis, a molestie mauris sollicitudin. Curabitur ultricies felis lorem, a aliquam felis elementum varius. Aenean eu justo vitae est hendrerit imperdiet a sed ipsum. Pellentesque a diam nec metus tempor dapibus. Donec maximus metus tincidunt fermentum tempus.
-        </p>
-    </section>
-
-    <section id="publicacao">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tempor magna, vitae laoreet arcu. Vivamus non lectus quam. Nullam finibus tristique lectus, a aliquam ex rutrum vitae. Vivamus at laoreet arcu, sit amet auctor augue. Suspendisse non scelerisque ipsum. Donec eu sem ut eros facilisis viverra. Sed vitae vestibulum mauris. Pellentesque pellentesque pretium metus, vitae lacinia massa imperdiet vitae. Nam consequat, odio a tincidunt lobortis, libero nisi porttitor odio, eget imperdiet libero lorem et eros. Suspendisse potenti. Aenean a hendrerit mauris. Mauris malesuada dolor sed ligula aliquam, non pretium justo vehicula. Quisque pulvinar tellus et nunc commodo, eget tristique nibh tempus. Fusce ac tempor enim. Ut fermentum condimentum orci, in feugiat felis.
-            Quisque ut mi tincidunt nulla imperdiet feugiat. Nullam pulvinar lacinia lectus, nec pharetra ex pellentesque viverra. Aliquam gravida mollis tincidunt. Duis est lacus, molestie id massa a, aliquam consectetur nisi. Fusce varius ex in mi venenatis, a molestie mauris sollicitudin. Curabitur ultricies felis lorem, a aliquam felis elementum varius. Aenean eu justo vitae est hendrerit imperdiet a sed ipsum. Pellentesque a diam nec metus tempor dapibus. Donec maximus metus tincidunt fermentum tempus.
-        </p>
-    </section>
-
-    <section id="contato">
-        <label>Contato</label>
-
-        <form>
-            <label>Name</label>
-            <input type="text" name="name">
-            <br>
-
-            <label>Email</label>
-            <input type="email" name="email">
-            <br>
-
-            <label>Mensagem</label>
-            <textarea name="mensagem"></textarea>
-            <br>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <section id="clientes">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tempor magna, vitae laoreet arcu. Vivamus non lectus quam. Nullam finibus tristique lectus, a aliquam ex rutrum vitae. Vivamus at laoreet arcu, sit amet auctor augue. Suspendisse non scelerisque ipsum. Donec eu sem ut eros facilisis viverra. Sed vitae vestibulum mauris. Pellentesque pellentesque pretium metus, vitae lacinia massa imperdiet vitae. Nam consequat, odio a tincidunt lobortis, libero nisi porttitor odio, eget imperdiet libero lorem et eros. Suspendisse potenti. Aenean a hendrerit mauris. Mauris malesuada dolor sed ligula aliquam, non pretium justo vehicula. Quisque pulvinar tellus et nunc commodo, eget tristique nibh tempus. Fusce ac tempor enim. Ut fermentum condimentum orci, in feugiat felis.
-            Quisque ut mi tincidunt nulla imperdiet feugiat. Nullam pulvinar lacinia lectus, nec pharetra ex pellentesque viverra. Aliquam gravida mollis tincidunt. Duis est lacus, molestie id massa a, aliquam consectetur nisi. Fusce varius ex in mi venenatis, a molestie mauris sollicitudin. Curabitur ultricies felis lorem, a aliquam felis elementum varius. Aenean eu justo vitae est hendrerit imperdiet a sed ipsum. Pellentesque a diam nec metus tempor dapibus. Donec maximus metus tincidunt fermentum tempus.
-        </p>
-    </section>
-
-
-
-
-</body>
-
-</html>--}}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>{{config('app.name')}}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!-- Font Awesome Icons -->
-    {{--<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--}}
-    <link href="{{asset('themes/startbootstrap-creative/css/fontawesome.min.css')}}" rel="stylesheet" type="text/css">
+    <!-- Favicons -->
+    <link href="{{asset('themes/reveal/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('themes/reveal/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    {{--<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
---}}
-    <!-- Plugin CSS -->
-    {{--<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">--}}
-    <link href="{{asset('themes/startbootstrap-creative/css/magnific-popup.css')}}" rel="stylesheet">
+    <link href="{{asset('themes/reveal/css/fonts.css')}}" rel="stylesheet">
+    {{--<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">--}}
 
-    <!-- Theme CSS - Includes Bootstrap -->
-    {{--<link href="css/creative.min.css" rel="stylesheet">--}}
-    <link href="{{asset('themes/startbootstrap-creative/css/creative.min.css')}}" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="{{asset('themes/reveal/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    {{--<link href="{{asset('css/creative-bootstrap.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">--}}
+    <!-- Libraries CSS Files -->
+    <link href="{{asset('themes/reveal/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('themes/reveal/lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('themes/reveal/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('themes/reveal/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('themes/reveal/lib/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
+    <link href="{{asset('themes/reveal/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
 
-    {{--<script src="gulpfile.js"></script>--}}
+    <!-- Main Stylesheet File -->
+    <link href="{{asset('themes/reveal/css/style.css')}}" rel="stylesheet">
 
-
-    <style>
-        /*nav ul ul {
-            display: none;
-        }
-        nav ul li:hover > ul {
-            display: block;
-        }
-        !*nav {*!
-            !*margin: 0 auto;*!
-            !*text-align: center;*!
-        !*}*!
-        nav ul {
-            !*background: #efefef;*!
-            !*background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-            background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-            background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);*!
-            !*box-shadow: 0px 0px 9px rgba(0,0,0,0.15);*!
-            padding: 0 20px;
-            border-radius: 10px;
-            list-style: none;
-            position: relative;
-            display: inline-table;
-        }
-        nav ul:after {
-            content: ""; clear: both; display: block;
-        }
-
-        nav ul li {
-            float: left;
-        }
-        nav ul li:hover {
-            !*background: #4b545f;*!
-            !*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-            background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-            background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);*!
-        }
-        nav ul li:hover a {
-            color: #fff;
-        }
-
-        nav ul li a {
-            display: block; padding: 15px 20px;
-            color: #757575; text-decoration: none;
-        }
-
-        nav ul ul {
-           !* background: #5f6975; border-radius: 0px; padding: 0;*!
-            position: absolute; top: 100%;
-        }
-        nav ul ul li {
-            float: none;
-            border-top: 1px solid #6b727c;
-            border-bottom: 1px solid #575f6a; position: relative;
-        }
-        nav ul ul li a {
-            padding: 15px 20px;
-            color: #fff;
-        }
-        nav ul ul li a:hover {
-            !*background: #4b545f;*!
-        }
-
-        nav ul ul ul {
-            position: absolute; left: 100%; top:0;
-        }
-
-        @-webkit-keyframes suntrack {
-            from {
-                -webkit-transform:rotate(.25turn) translate3d(0px, 0px, 0px);
-            }
-            to {
-                -webkit-transform:rotate(-.75turn) translate3d(0px, 0px, 0px);
-            }
-        }
-        @keyframes suntrack {
-            from {
-                transform:rotate(.25turn) translate3d(0px, 0px, 0px);
-            }
-            to {
-                transform:rotate(-.75turn) translate3d(0px, 0px, 0px);
-            }
-        }
-        @-webkit-keyframes sunpulse {
-            from {
-                box-shadow:0 0 100px #ff0, 0 0 100px #ff0;
-            }
-            to {
-                box-shadow:0 0 50px #ff0, 0 0 75px #ff0;
-            }
-        }
-        @keyframes sunpulse {
-            from {
-                box-shadow:0 0 100px #ff0, 0 0 100px #ff0;
-            }
-            to {
-                box-shadow:0 0 50px #ff0, 0 0 75px #ff0;
-            }
-        }*/
-        /*.masthead {
-            background: white;
-        }*/
-    </style>
-
+    <!-- =======================================================
+      Theme Name: Reveal
+      Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
 </head>
 
-<body id="page-top">
+<body id="body">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">{{--Safety Cubic--}}
-            <img src="{{asset('themes/startbootstrap-creative/img/logo.png')}}">
-        </a>
+    <!--==========================
+      Top Bar
+    ============================-->
+    @component('core::components.theme-reveal.partials.topbar', [
+        'email'  => $company->email,
+        'phone'  => $company->phone,
+        'social' => [
+            'twitter'     => '#',
+            'facebook'    => '#',
+            'instagram'   => '#',
+            'google-plus' => '#',
+            'linkedin'    => '#',
+        ]
+    ]) @endcomponent
 
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                @foreach($menu as $item)
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{{$item['url']}}" style="color: #000000">{{$item['display_name']}}</a>
-                    </li>
-                @endforeach
-            </ul>
+    <!--==========================
+      Header
+    ============================-->
+    @component('core::components.theme-reveal.partials.header', [
+        'menus'  => $menus,
+    ]) @endcomponent
+    <!-- #header -->
+
+<!--==========================
+  Intro Section
+============================-->
+<section id="intro">
+
+    <div class="intro-content">
+        <h2>Making <span>your ideas</span><br>happen!</h2>
+        <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="#consulting" class="btn-projects scrollto">Consulting</a>
         </div>
     </div>
-</nav>
 
-<!-- Masthead -->
-<header class="masthead" {{--style="background: #8fa1b3;"--}}>
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
-                <hr class="divider my-4">
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-            </div>
-        </div>
-    </div>
-</header>
+    {{--<div id="intro-carousel" class="owl-carousel" >
+        <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
+        <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
+        <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
+        <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
+        <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
+    </div>--}}
 
-{{--<!-- About Home -->
-<section class="page-section bg-primary" id="about">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">We've got what you need!</h2>
-                <hr class="divider light my-4">
-                <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-            </div>
-        </div>
-    </div>
 </section>
+<!-- #intro -->
 
-<!-- Services Section -->
-<section class="page-section" id="services">
-    <div class="container">
-        <h2 class="text-center mt-0">At Your Service</h2>
-        <hr class="divider my-4">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-                    <h3 class="h4 mb-2">Sturdy Themes</h3>
-                    <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                    <h3 class="h4 mb-2">Up to Date</h3>
-                    <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-                    <h3 class="h4 mb-2">Ready to Publish</h3>
-                    <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-                    <h3 class="h4 mb-2">Made with Love</h3>
-                    <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<main id="main">
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption p-3">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call to Action Section -->
-<section class="page-section bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section class="page-section" id="contact">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">Let's Get In Touch!</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+1 (202) 555-0149</div>
-            </div>
-            <div class="col-lg-4 mr-auto text-center">
-                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <!-- Make sure to change the email address in anchor text AND the link below! -->
-                <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
-            </div>
-        </div>
-    </div>
-</section>--}}
-
-
-    @component('core::components.theme-creative-bootstrap.section', [
-        'id'               => 'home',
-        'additional_class' => 'bg-primary',
+    <!--==========================
+      About Section
+    ============================-->
+    @component('core::components.theme-reveal.section', [
+        'id' => 'about',
+        'additional_class' => 'wow fadeInUp'
     ])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">We've got what you need!</h2>
-                <hr class="divider light my-4">
-                <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-            </div>
-        </div>
+        <div class="row">
+            @foreach($principles as $principle)
+                <div class="col-lg-4 content">
+                    <h2>{{$principle['title']}}</h2>
+                    <h3>{{$principle['text']}}</h3>
 
-        <div class="row justify-content-center">
-            @foreach($videos as $video)
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">{{$video->url}}</h3>
-                        <p class="text-muted mb-0">{{$video->title}}</p>
+                    <ul>
+                        @foreach($principle['items'] as $item)
+                        <li><i class="ion-android-checkmark-circle"></i>{{$item}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endforeach
+        </div>
+    @endcomponent
+    <!-- #about -->
+
+    <!--==========================
+      Consulting Section
+    ============================-->
+    @component('core::components.theme-reveal.section', [
+        'id'    => 'consulting',
+        'title' => trans('institutional::menu.consulting'),
+        'text'  => trans('institutional::institutional.text_consulting'),
+    ])
+        <div class="row">
+            @foreach($courses as $key => $course)
+                <div class="col-lg-6">
+                    <div class="box wow {{$key%2 == 0 ? 'fadeInLeft' : 'fadeInRight'}} ">
+                        <div class="icon"><i class="{{$course->picture}}"></i></div>
+                        <h4 class="title"><a href="">{{config('app.locale') == 'pt_BR' ? $course->name_pt_br : $course->name_en}}</a></h4>
+                        <p class="description">{{config('app.locale') == 'pt_BR' ? $course->description_pt_br : $course->description_en}}</p>
                     </div>
                 </div>
             @endforeach
         </div>
     @endcomponent
+    <!-- #consulting -->
 
 
-    {{--@include('institutional::institutional.sections.diretor')--}}
-    @component('core::components.theme-creative-bootstrap.section', ['id' => 'diretor'])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">{{trans('institutional::menu.diretor')}}</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">{{trans('institutional::institutional.text_diretor')}}</p>
+    <!--==========================
+      Customers Section
+    ============================-->
+    {{--@component('core::components.theme-reveal.section', [
+        'id'    => 'clients',
+        'title' => trans('institutional::menu.clients'),
+        'text'  => 'Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore',
+        'additional_class' => 'wow fadeInUp'
+    ])
+        <div class="owl-carousel clients-carousel">
+            <img src="{{asset('themes/reveal/img/clients/client-1.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-2.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-3.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-4.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-5.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-6.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-7.png')}}" alt="">
+            <img src="{{asset('themes/reveal/img/clients/client-8.png')}}" alt="">
+        </div>
+    @endcomponent--}}
+    <!-- #clients -->
+
+    <!--==========================
+      Our Portfolio Section
+    ============================-->
+    {{--<section id="portfolio" class="wow fadeInUp">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
             </div>
         </div>
+
+        <div class="container-fluid">
+            <div class="row no-gutters">
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/1.jpg" class="portfolio-popup">
+                            <img src="{{asset('themes/reveal/img/portfolio/1.jpg')}}" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 1</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/2.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/2.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 2</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/3.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/3.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 3</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/4.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/4.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 4</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/5.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/5.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 5</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/6.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/6.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 6</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/7.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/7.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 7</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <div class="portfolio-item wow fadeInUp">
+                        <a href="img/portfolio/8.jpg" class="portfolio-popup">
+                            <img src="img/portfolio/8.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 8</h2></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>--}}
+    <!-- #portfolio -->
+
+    <!--==========================
+      Testimonials Section
+    ============================-->
+    @component('core::components.theme-reveal.section', [
+        'id'    => 'testimonials',
+        'title' => trans('institutional::menu.testimonials'),
+        'text'  => trans('institutional::institutional.text_testimonials'),
+        'additional_class' => 'wow fadeInUp',
+    ])
+
+        <div class="owl-carousel testimonials-carousel">
+
+            @foreach($testimonials as $testimonial)
+                <div class="testimonial-item">
+                    <p>
+                        <img src="{{asset('themes/reveal/img/quote-sign-left.png')}}" class="quote-sign-left" alt="">
+                        {{$testimonial->testimonial}}
+                        <img src="{{asset('themes/reveal/img/quote-sign-right.png')}}" class="quote-sign-right" alt="">
+                    </p>
+                    <img src="{{asset($testimonial->picture)}}" class="testimonial-img" alt="">
+                    <h3>{{$testimonial->name}}</h3>
+                    <h4>{{$testimonial->role}}</h4>
+                </div>
+            @endforeach
+        </div>
+
     @endcomponent
+    <!-- #testimonials -->
 
-    {{--@include('institutional::institutional.sections.cursos-livres')--}}
-    @component('core::components.theme-creative-bootstrap.section', ['id' => 'cursos_livres'])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">{{trans('institutional::menu.cursos_livres')}}</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">{{trans('institutional::institutional.text_cursos_livres')}}</p>
-            </div>
-        </div>
-    @endcomponent
-
-    {{--@include('institutional::institutional.sections.consultoria')--}}
-    @component('core::components.theme-creative-bootstrap.section', ['id' => 'consultoria'])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">{{trans('institutional::menu.consultoria')}}</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">{{trans('institutional::institutional.text_consultoria')}}</p>
-            </div>
-        </div>
-    @endcomponent
-
-    {{--@include('institutional::institutional.sections.publicacao')--}}
-    @component('core::components.theme-creative-bootstrap.section', ['id' => 'publicacao'])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">{{trans('institutional::menu.publicacao')}}</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">{{trans('institutional::institutional.text_publicacao')}}</p>
-            </div>
-        </div>
-    @endcomponent
-
-    {{--@include('institutional::institutional.sections.clientes')--}}
-    @component('core::components.theme-creative-bootstrap.section', ['id' => 'clientes'])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">{{trans('institutional::menu.clientes')}}</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">{{trans('institutional::institutional.text_diretor')}}</p>
-            </div>
-        </div>
-    @endcomponent
-
-    {{--@include('institutional::institutional.sections.contato')--}}
-    @component('core::components.theme-creative-bootstrap.section', ['id' => 'contato'])
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">Let's Get In Touch!</h2>
-                <hr class="divider my-4">
-                <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-        </div>
+    <!--==========================
+      Instituional Videos Section
+    ============================-->
+    @component('core::components.theme-reveal.section', [
+        'id'    => 'instituional-videos',
+        'title' => trans('institutional::menu.videos'),
+        'text'  => '',
+    ])
         <div class="row">
-            <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+1 (202) 555-0149</div>
+            {{--@foreach($courses as $key => $course)
+                <div class="col-lg-6">
+                    <div class="box wow {{$key%2 == 0 ? 'fadeInLeft' : 'fadeInRight'}} ">
+                        <div class="icon"><i class="{{$course->picture}}"></i></div>
+                        <h4 class="title"><a href="">{{config('app.locale') == 'pt_BR' ? $course->name_pt_br : $course->name_en}}</a></h4>
+                        <p class="description">{{config('app.locale') == 'pt_BR' ? $course->description_pt_br : $course->description_en}}</p>
+                    </div>
+                </div>
+            @endforeach--}}
+            <div class="col-lg-6">
+                <div class="box wow fadeInLeft">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/R1CiN6esbkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="col-lg-4 mr-auto text-center">
-                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <!-- Make sure to change the email address in anchor text AND the link below! -->
-                <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+
+            <div class="col-lg-6">
+                <div class="box wow fadeInRight">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/R1CiN6esbkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     @endcomponent
+    <!-- #instituional videos -->
 
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    {{--<section id="call-to-action" class="wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-left">
+                    <h3 class="cta-title">Call To Action</h3>
+                    <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="#">Call To Action</a>
+                </div>
+            </div>
 
-<!-- Footer -->
-<footer class="bg-light py-5">
+        </div>
+    </section>--}}
+    <!-- #call-to-action -->
+
+    <!--==========================
+      Our Team Section
+    ============================-->
+    {{--<section id="team" class="wow fadeInUp">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{trans('institutional::menu.our_team')}}</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="{{asset('themes/reveal/img/team-1.jpg')}}" alt=""></div>
+                        <div class="details">
+                            <h4>Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                            <div class="social">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="{{asset('themes/reveal/img/team-2.jpg')}}" alt=""></div>
+                        <div class="details">
+                            <h4>Sarah Jhinson</h4>
+                            <span>Product Manager</span>
+                            <div class="social">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="{{asset('themes/reveal/img/team-3.jpg')}}" alt=""></div>
+                        <div class="details">
+                            <h4>William Anderson</h4>
+                            <span>CTO</span>
+                            <div class="social">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="{{asset('themes/reveal/img/team-4.jpg')}}" alt=""></div>
+                        <div class="details">
+                            <h4>Amanda Jepson</h4>
+                            <span>Accountant</span>
+                            <div class="social">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>--}}
+<!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="wow fadeInUp">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{trans('institutional::menu.contact_us')}}</h2>
+                <p>{{trans('institutional::institutional.text_contact_us')}}</p>
+            </div>
+
+            <div class="row contact-info">
+
+                <div class="col-md-4">
+                    <div class="contact-address">
+                        <i class="ion-ios-location-outline"></i>
+                        <h3>{{trans('institutional::institutional.address')}}</h3>
+                        <address>{{$company->present()->fullAddress}}</address>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-phone">
+                        <i class="ion-ios-telephone-outline"></i>
+                        <h3>{{trans('institutional::institutional.phone_number')}}</h3>
+                        <p>{{$company->phone}}</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-email">
+                        <i class="ion-ios-email-outline"></i>
+                        <h3>{{trans('institutional::institutional.email')}}</h3>
+                        <p><a href="mailto:{{$company->email}}">{{$company->email}}</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container mb-4">
+            <iframe src="{{$company->url_google_maps}}" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <div class="container">
+            <div class="form">
+                <div id="sendmessage">{{trans('institutional::institutional.success_send_message')}}</div>
+
+                <div id="errormessage">{{trans('institutional::institutional.error_send_message')}}</div>
+
+                <form action="" method="post" role="form" class="contactForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control"
+                                   name="name"
+                                   id="name"
+                                   placeholder="{{trans('institutional::institutional.place_name')}}"
+                                   data-rule="minlen:4"
+                                   data-msg="{{trans('institutional::institutional.error_name')}}" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control"
+                                   name="email"
+                                   id="email"
+                                   placeholder="{{trans('institutional::institutional.place_email')}}"
+                                   data-rule="email"
+                                   data-msg="{{trans('institutional::institutional.error_email')}}" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control"
+                               name="subject"
+                               id="subject"
+                               placeholder="{{trans('institutional::institutional.place_subject')}}"
+                               data-rule="minlen:4"
+                               data-msg="{{trans('institutional::institutional.error_subject')}}" />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5"
+                              name="message"
+                              data-rule="required"
+                              data-msg="{{trans('institutional::institutional.error_message')}}"
+                              placeholder="{{trans('institutional::institutional.place_message')}}"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="text-center"><button type="submit">{{trans('institutional::institutional.btn_send_message')}}</button></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- #contact -->
+
+</main>
+
+<!--==========================
+  Footer
+============================-->
+<footer id="footer">
     <div class="container">
-        <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+        <div class="copyright">
+            {{--&copy; Copyright <strong>Reveal</strong>. All Rights Reserved--}}
+            &copy; Copyright <strong>Safety Cubic</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
+            -->
+            Developed by <strong>ProTec Solutions - Tecnologia & Segurança</strong>
+           {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>--}}
+            {{--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>--}}
+        </div>
     </div>
-</footer>
+</footer><!-- #footer -->
 
-<!-- Bootstrap core JavaScript -->
-<script src="{{asset('themes/startbootstrap-creative/js/jquery.min.js')}}"></script>
-<script src="{{asset('themes/startbootstrap-creative/js/bootstrap.bundle.min.js')}}"></script>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<!-- Plugin JavaScript -->
-<script src="{{asset('themes/startbootstrap-creative/js/jquery.easing.min.js')}}"></script>
-<script src="{{asset('themes/startbootstrap-creative/js/jquery.magnific-popup.min.js')}}"></script>
+<!-- JavaScript Libraries -->
+<script src="{{asset('themes/reveal/lib/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/jquery/jquery-migrate.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/easing/easing.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/superfish/hoverIntent.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/superfish/superfish.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/wow/wow.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/magnific-popup/magnific-popup.min.js')}}"></script>
+<script src="{{asset('themes/reveal/lib/sticky/sticky.js')}}"></script>
 
-<!-- Custom scripts for this template -->
-<script src="{{asset('themes/startbootstrap-creative/js/creative.min.js')}}"></script>
+<!-- Contact Form JavaScript File -->
+<script src="{{asset('themes/reveal/js/contactform.js')}}"></script>
 
+<!-- Template Main Javascript File -->
+<script src="{{asset('themes/reveal/js/main.js')}}"></script>
 
 </body>
-
 </html>

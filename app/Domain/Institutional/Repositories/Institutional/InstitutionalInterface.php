@@ -17,5 +17,10 @@ interface InstitutionalInterface {
      */
     public function all();
 
+    /**
+    * return Mission, Vision and Values
+     */
+    public function principles();
+
 
 }

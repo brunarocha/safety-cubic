@@ -19,33 +19,39 @@ class CreateCoursesSeed extends Seeder
     public function run()
     {
         Course::create([
-            'name'        => 'Qualidade',
-            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
-            //'picture'     => 'fa fa-bar-chart',
-            'picture'     => 'fa fa-line-chart',
-            'value'       => 0.0,
+            'name_pt_br'        => 'Qualidade',
+            'name_en'           => 'Quality',
+            'description_pt_br' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'description_en'    => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'picture'           => 'fa fa-line-chart',
+            'value'             => 0.0,
         ]);
 
         Course::create([
-            'name'        => 'Meio Ambiente',
-            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
-            //'picture'     => 'fa fa-picture-o',
-            'picture'     => 'fa fa-tree',
-            'value'       => 0.0,
+            'name_pt_br'        => 'Meio Ambiente',
+            'name_en'           => 'Environment',
+            'description_pt_br' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'description_en'    => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'picture'           => 'fa fa-tree',
+            'value'             => 0.0,
         ]);
 
         Course::create([
-            'name'        => 'Saúde Ocupacional',
-            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
-            'picture'     => 'fa fa-plus-square',
-            'value'       => 0.0,
+            'name_pt_br'        => 'Saúde Ocupacional',
+            'name_en'           => 'Occupational Health',
+            'description_pt_br' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'description_en'    => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'picture'           => 'fa fa-plus-square',
+            'value'             => 0.0,
         ]);
 
         Course::create([
-            'name'        => 'Segurança Patrimonial',
-            'description' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
-            'picture'     => 'fa fa-shield',
-            'value'       => 0.0,
+            'name_pt_br'        => 'Segurança Patrimonial',
+            'name_en'           => 'Property Security',
+            'description_pt_br' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'description_en'    => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.',
+            'picture'           => 'fa fa-shield',
+            'value'             => 0.0,
         ]);
 
     }

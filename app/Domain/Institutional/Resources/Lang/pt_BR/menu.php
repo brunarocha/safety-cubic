@@ -19,4 +19,5 @@ return [
     'testimonials'  => 'Depoimentos',
     'our_team'      => 'Nosso Time',
     'contact_us'    => 'Contato',
+    'videos'        => 'Vídeos',
 ];

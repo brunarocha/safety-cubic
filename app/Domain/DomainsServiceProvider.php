@@ -8,6 +8,7 @@
  */
 namespace App\Domain;
 
+use App\Domain\Company\Providers\CompanyServiceProvider;
 use App\Domain\Core\Providers\CoreServiceProvider;
 use App\Domain\Course\Providers\CourseServiceProvider;
 use App\Domain\Institutional\Providers\InstitutionalServiceProvider;
@@ -31,6 +32,7 @@ class DomainsServiceProvider extends ServiceProvider
         $this->app->register(CoreServiceProvider::class);
         $this->app->register(InstitutionalServiceProvider::class);
         $this->app->register(CourseServiceProvider::class);
+        $this->app->register(CompanyServiceProvider::class);
     }
 
     /**

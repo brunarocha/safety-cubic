@@ -27,8 +27,10 @@ class CreateCoursesTable extends Migration
     {
         $this->schema->create($this->table, function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('description');
+            $table->string('name_pt_br');
+            $table->string('name_en');
+            $table->text('description_pt_br');
+            $table->text('description_en');
             $table->string('icon')->nullable();
             $table->string('picture')->nullable();
             $table->decimal('value', 10, 2)->nullable();

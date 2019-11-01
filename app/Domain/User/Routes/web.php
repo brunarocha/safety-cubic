@@ -18,7 +18,7 @@
         /*
          * Dashboard
          * */
-        Route::get('dashboard', 'User\UserController@dashboard');
+        Route::get('dashboard', 'User\UserController@dashboard')->name('dashboard.index');
 
 
         /*

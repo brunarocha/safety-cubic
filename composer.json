@@ -11,6 +11,7 @@
         "php": "^7.2",
         "artesaos/migrator": "^2.0",
         "fideloper/proxy": "^4.0",
+        "laracasts/presenter": "^0.2.2",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravel/ui": "^1.1"

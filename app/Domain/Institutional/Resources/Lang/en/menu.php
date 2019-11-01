@@ -19,5 +19,6 @@ return [
     'testimonials'  => 'Testimonials',
     'our_team'      => 'Our Team',
     'contact_us'    => 'Contact Us',
+    'videos'        => 'Videos',
 
 ];

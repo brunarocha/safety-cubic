@@ -47,7 +47,7 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         if(Auth::attempt($request->only(['email', 'password']), false)){
-            return view('user::dashboard.index');
+            return redirect()->route('dashboard.index');
         }
 
         return redirect()->back()->with('error', trans('user::auth.message_login_error'));

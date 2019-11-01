@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Login &mdash; {{\Config::get('app.name')}}</title>
+    <title>Login &mdash; {{config('app.name')}}</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{asset('themes/stisla/modules/bootstrap/css/bootstrap.min.css')}}">
@@ -27,7 +27,21 @@
 
         gtag('config', 'UA-94034622-3');
     </script>
-    <!-- /END GA --></head>
+    <!-- /END GA -->
+
+    <style>
+        .btn-login-modified {
+            background-color: #0c2e8a;
+            border-color: #0c2e8a
+        }
+
+        .color-modified {
+            color: #0c2e8a;
+        }
+
+    </style>
+
+</head>
 
 <body>
 <div id="app">
@@ -36,12 +50,13 @@
             <div class="row">
                 <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                     <div class="login-brand">
-                        <img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+                        <strong>Safety</strong> Cubic
+                        {{--<img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">--}}
                     </div>
 
                     @component('core::components.theme-stisla.alerts.sweetalert')@endcomponent
 
-                    <div class="card card-primary">
+                    <div class="card card-primary" style="border-top: 2px solid #0c2e8a">
                         <div class="card-header"><h4>{{trans('user::auth.label_login')}}</h4></div>
 
                         <div class="card-body">
@@ -61,7 +76,7 @@
                                     <div class="d-block">
                                         <label for="password" class="control-label">{{trans('user::auth.label_password')}}</label>
                                         <div class="float-right">
-                                            <a href="auth-forgot-password.html" class="text-small">
+                                            <a href="auth-forgot-password.html" class="text-small color-modified">
                                                 {{trans('user::auth.label_forgot_password')}}
                                             </a>
                                         </div>
@@ -81,32 +96,16 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-login-modified" tabindex="4">
                                         {{trans('user::auth.label_login')}}
                                     </button>
+
                                 </div>
                             </form>
-
-                            <div class="text-center mt-4 mb-3">
-                                <div class="text-job text-muted">Login With Social</div>
-                            </div>
-                            <div class="row sm-gutters">
-                                <div class="col-6">
-                                    <a class="btn btn-block btn-social btn-facebook">
-                                        <span class="fab fa-facebook"></span> Facebook
-                                    </a>
-                                </div>
-                                <div class="col-6">
-                                    <a class="btn btn-block btn-social btn-twitter">
-                                        <span class="fab fa-twitter"></span> Twitter
-                                    </a>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                     <div class="mt-5 text-muted text-center">
-                        {{trans('user::auth.label_dont_account')}} <a href="{{--{{route('user::user.register')}}--}}">{{trans('user::auth.label_create_account')}}</a>
+                        {{trans('user::auth.label_dont_account')}} <a href="{{--{{route('user::user.register')}}--}}" class="color-modified">{{trans('user::auth.label_create_account')}}</a>
                     </div>
                     <div class="simple-footer">
                         Copyright &copy; Stisla 2018

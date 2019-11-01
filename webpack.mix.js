@@ -5,10 +5,6 @@ var paths = {
         dev : 'resources/assets/core',
         dist: 'public/core'
     },
-    creative: {
-        dev : 'resources/assets/themes/startbootstrap-creative',
-        dist: 'public/themes/startbootstrap-creative'
-    },
     stisla: {
         dev : 'resources/assets/themes/stisla/dist/assets',
         dist: 'public/themes/stisla'
@@ -30,23 +26,6 @@ var paths = {
  |
  */
 // npm run development -- --watch
-
-/* Theme Creative Scripts */
-/*mix.js([paths.themes.creative.dev+'/vendor/bootstrap/js/bootstrap.bundle.min.js'], paths.themes.creative.dist+'/js/bootstrap.bundle.min.js')
-   .js([paths.themes.creative.dev+'/vendor/bootstrap/js/bootstrap.min.js'], paths.themes.creative.dist+'/js/bootstrap.min.js')
-   .js([paths.themes.creative.dev+'/vendor/jquery-easing/jquery.easing.min.js'], paths.themes.creative.dist+'/js/jquery.easing.min.js')
-   .js([paths.themes.creative.dev+'/vendor/magnific-popup/jquery.magnific-popup.min.js'], paths.themes.creative.dist+'/js/jquery.magnific-popup.min.js')
-   .js([paths.themes.creative.dev+'/vendor/jquery/jquery.min.js'], paths.themes.creative.dist+'/js/jquery.min.js')
-   .js([paths.themes.creative.dev+'/js/creative.min.js'], paths.themes.creative.dist+'/js/creative.min.js');*/
-
-/* Theme Creative Styles */
-/*mix.styles([paths.themes.creative.dev+'/css/creative.min.css'], paths.themes.creative.dist+'/css/creative.min.css')
-   .styles([paths.themes.creative.dev+'/vendor/magnific-popup/magnific-popup.css'], paths.themes.creative.dist+'/css/magnific-popup.css');*/
-
-/* Theme Creative Fonts */
-/*mix.styles([paths.themes.creative.dev+'/vendor/fontawesome-free/css/!*.css'], paths.themes.creative.dist+'/css/fontawesome.min.css');
-mix.copyDirectory(paths.themes.creative.dev+'/vendor/fontawesome-free/webfonts/', paths.themes.creative.dist+'/webfonts/');
-mix.copyDirectory(paths.themes.creative.dev+'/img', paths.themes.creative.dist+'/img/');*/
 
 /*
 * Core

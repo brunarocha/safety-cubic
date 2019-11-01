@@ -6,6 +6,7 @@ return [
     'label_courses'         => 'Cursos',
     'label_institutional'   => 'Institucional',
     'label_site'            => 'Site',
+    'label_company'         => 'Empresa',
     'label_videos'          => 'Vídeos',
     'label_instructors'     => 'Instrutores',
     'label_students'        => 'Alunos',
