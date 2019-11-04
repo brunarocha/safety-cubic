@@ -14,7 +14,7 @@
     <a href="#" class="nav-link has-dropdown">
         <i class="{{$icon_class}}"></i> <span>{{$title}}</span>
     </a>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu" style="display: block;">
         @foreach($links as $key => $link)
             <li><a class="nav-link" href="{{$link}}">{{$key}}</a></li>
         @endforeach

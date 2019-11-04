@@ -34,11 +34,6 @@ class CourseController extends Controller {
         return view('course::course.index');
     }
 
-    public function dashboard()
-    {
-        return view('users::dashboard.index');
-    }
-
     public function create()
     {
 

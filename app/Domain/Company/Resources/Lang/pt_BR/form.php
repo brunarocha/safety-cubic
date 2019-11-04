@@ -8,7 +8,7 @@ return [
      * Fields
      * */
     'label_register'        => 'CNPJ',
-    'label_name'            => 'Nome',
+    'label_social_name'     => 'Razão Social',
     'label_fancy_name'      => 'Nome Fantasia',
     'label_address'         => 'Endereço',
     'label_address_number'  => 'Número',

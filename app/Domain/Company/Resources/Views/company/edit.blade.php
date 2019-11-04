@@ -4,156 +4,132 @@
 
 @section('container')
 
-        {{--<div class="section-header">
-            <h1>{{trans('core::menu.label_company')}}</h1>
-            <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                <div class="breadcrumb-item">Form Validation</div>
-            </div>
-        </div>--}}
-
         @component('core::components.theme-stisla.partials.header', [
-            'title'      => trans('core::menu.label_company'),
+            'title'      => trans('dashboard::menu.label_company'),
             'title_card' => trans('company::form.label_edit'),
             'breadcrumb' => [
-                trans('core::menu.label_institutional'),
-                trans('core::menu.label_company'),
+                trans('dashboard::menu.label_institutional'),
+                trans('dashboard::menu.label_company'),
             ]
         ]) @endcomponent
 
         <div class="section-body">
-            <form class="needs-validation" novalidate="">
+            <form class="needs-validation" action="{{route('company.update', $company->id)}}" method="POST" novalidate="">
+                @csrf
+                @method('PUT')
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-12">
 
                         <div class="card">
-                            <div class="col-12 col-md-12 col-lg-12">
-                                <div class="card-header">
-                                    <h4>{{trans('company::form.label_edit')}}</h4>
-                                </div>
-                            </div>
+                            @component('core::components.theme-stisla.cards.header', [
+                                'title' => trans('company::form.label_edit')
+                            ])@endcomponent
 
                             <div class="card-body">
 
                                 <div class="row">
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_register')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->register}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_register'),
+                                        'name'      => 'register',
+                                        'value'     => $company->register,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-6',
+                                    ])@endcomponent
 
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_name')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->name}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_social_name'),
+                                        'name'      => 'social_name',
+                                        'value'     => $company->social_name,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-6',
+                                    ])@endcomponent
+
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_fancy_name'),
+                                        'name'      => 'fancy_name',
+                                        'value'     => $company->fancy_name,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-6',
+                                    ])@endcomponent
+
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_email'),
+                                        'name'      => 'email',
+                                        'value'     => $company->email,
+                                        'error_msg' => "Oh no! Email is invalid.",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-6',
+                                    ])@endcomponent
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_fancy_name')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->fancy_name}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_phone'),
+                                        'name'      => 'phone',
+                                        'value'     => $company->phone,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-4',
+                                    ])@endcomponent
 
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_email')}}</label>
-                                            <input type="email" class="form-control" required="" value="{{$company->email}}">
-                                            <div class="invalid-feedback">
-                                                Oh no! Email is invalid.
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_zip_code'),
+                                        'name'      => 'zip_code',
+                                        'value'     => $company->zip_code,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-2',
+                                    ])@endcomponent
+
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_address'),
+                                        'name'      => 'address',
+                                        'value'     => $company->address,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-6',
+                                    ])@endcomponent
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_phone')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->phone}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_address_number'),
+                                        'name'      => 'address_number',
+                                        'value'     => $company->address_number,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-6 col-lg-2',
+                                    ])@endcomponent
 
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_address')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->address}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_city'),
+                                        'name'      => 'city',
+                                        'value'     => $company->city,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-4 col-lg-5',
+                                    ])@endcomponent
 
-                                <div class="row">
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_address_number')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->address_number}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_state'),
+                                        'name'      => 'state',
+                                        'value'     => $company->state,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-4 col-lg-2',
+                                    ])@endcomponent
 
-                                    <div class="col-6 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_zip_code')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->zip_code}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-6 col-md-4 col-lg-4">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_city')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->city}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-4 col-lg-4">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_state')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->state}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-4 col-lg-4">
-                                        <div class="form-group">
-                                            <label>{{trans('company::form.label_country')}}</label>
-                                            <input type="text" class="form-control" required="" value="{{$company->country}}">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @component('core::components.theme-stisla.form.input-text', [
+                                        'label'     => trans('company::form.label_country'),
+                                        'name'      => 'country',
+                                        'value'     => $company->country,
+                                        'error_msg' => "What's your name?",
+                                        'required'  => true,
+                                        'class_col' => 'col-12 col-md-4 col-lg-3',
+                                    ])@endcomponent
                                 </div>
 
                             </div>
@@ -173,6 +149,5 @@
 
 @section('js_specific')
     <!-- Page Specific JS File -->
-    {{--<script src="{{asset('themes/stisla/js/page/index.js')}}"></script>--}}
 
 @endsection

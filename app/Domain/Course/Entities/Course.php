@@ -6,6 +6,7 @@
 
 namespace App\Domain\Course\Entities;
 
+use App\Domain\LearningUnit\Entities\CourseMaterial;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -36,6 +37,11 @@ class Course extends Model
      */
     protected $hidden = [
     ];
+
+    public function materials()
+    {
+        return $this->hasMany(CourseMaterial::class, 'course_id', 'id');
+    }
 
 
 }

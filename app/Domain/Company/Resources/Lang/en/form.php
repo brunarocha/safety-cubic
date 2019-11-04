@@ -8,7 +8,7 @@ return [
      * Fields
      * */
     'label_register'        => 'Register',
-    'label_name'            => 'Name',
+    'label_social_name'     => 'Social Name',
     'label_fancy_name'      => 'Fancy Name',
     'label_address'         => 'Address',
     'label_address_number'  => 'Number',

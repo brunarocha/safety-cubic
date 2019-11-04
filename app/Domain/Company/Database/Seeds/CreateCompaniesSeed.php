@@ -19,7 +19,7 @@ class CreateCompaniesSeed extends Seeder
     public function run()
     {
         Company::create([
-            'name'               => 'Safety Cubic',
+            'social_name'        => 'Safety Cubic',
             'fancy_name'         => 'Safety Cubic',
             'register'           => '555.555.5555/55',
             'address'            => 'Rua São Luíz, Adrianopólis',

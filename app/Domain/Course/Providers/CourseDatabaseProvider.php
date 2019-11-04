@@ -8,7 +8,9 @@
 namespace App\Domain\Course\Providers;
 
 use App\Domain\Course\Database\Migrations\CreateCoursesTable;
+use App\Domain\Course\Database\Migrations\CreateCoursesUserTable;
 use App\Domain\Courses\Database\Seeds\CreateCoursesSeed;
+use App\Domain\Courses\Database\Seeds\CreateCoursesUsersSeed;
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
 
@@ -28,11 +30,13 @@ class CourseDatabaseProvider extends ServiceProvider
     public function register()
     {
         $this->migrations([
-            CreateCoursesTable::class
+            CreateCoursesTable::class,
+            CreateCoursesUserTable::class
         ]);
 
         $this->seeders([
-            CreateCoursesSeed::class
+            CreateCoursesSeed::class,
+            CreateCoursesUsersSeed::class
         ]);
     }
 }

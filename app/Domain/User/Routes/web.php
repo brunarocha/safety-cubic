@@ -16,17 +16,11 @@
     Route::middleware(['auth'])->group(function () {
 
         /*
-         * Dashboard
-         * */
-        Route::get('dashboard', 'User\UserController@dashboard')->name('dashboard.index');
-
-
-        /*
          * Users
          * */
         Route::resource('users', 'User\UserController')->names([
             'index'     => 'user.index',
-            'create' => 'user.create',
+            'create'    => 'user.create',
             'store'     => 'user.store',
             'edit'      => 'user.edit',
             'delete'    => 'user.delete',

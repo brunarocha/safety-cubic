@@ -28,7 +28,7 @@ class CreateCompaniesTable extends Migration
     {
         $this->schema->create($this->table, function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('social_name');
             $table->string('register');
             $table->string('fancy_name');
             $table->string('address');

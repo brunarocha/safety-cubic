@@ -48,11 +48,8 @@
 
         <!-- Main Content -->
         <div class="main-content">
-            <section class="section">
 
-                @yield('container')
-
-            </section>
+            @yield('container')
         </div>
 
         <!-- Begin: Footer -->

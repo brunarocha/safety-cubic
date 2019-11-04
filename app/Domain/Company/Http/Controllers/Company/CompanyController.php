@@ -53,7 +53,10 @@ class CompanyController extends Controller {
 
     public function update(Request $request, $id)
     {
+        $this->company->update($request->all(), $id);
+        $company = $this->company->show($id);
 
+        return redirect()->route('company.edit', $id)->with(['company' => $company]);
     }
 
     public function delete($id)

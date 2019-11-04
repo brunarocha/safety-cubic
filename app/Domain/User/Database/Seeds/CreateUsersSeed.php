@@ -25,6 +25,15 @@ class CreateUsersSeed extends Seeder
             'password'  => Hash::make('12345678'),
             'language'  => 'en_US'
         ]);
+
+        User::create([
+            'name'      => 'Raimundo Silva',
+            'email'     => 'raimundo@gmail.com',
+            'password'  => Hash::make('123456'),
+            'language'  => 'pt_BR'
+        ]);
+
+
     }
 
 }

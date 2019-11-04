@@ -52,7 +52,7 @@ class CompanyRepository extends AbstractRepository implements CompanyInterface {
      */
     public function update(array $array, $id)
     {
-
+        return $this->model->update($array, $id);
     }
 
     /**
