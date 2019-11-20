@@ -6,7 +6,7 @@
 
 namespace App\Domain\User\Entities\User;
 
-use App\Domain\Course\Entities\Course;
+use App\Domain\Training\Entities\Training;
 use App\Domain\User\Traits\PermissionsTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -52,8 +52,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class, 'users_roles');
     }
 
-    public function courses()
+    public function trainings()
     {
-        return $this->belongsToMany(Course::class, 'courses_users');
+        return $this->belongsToMany(Training::class, 'trainings_users');
     }
 }

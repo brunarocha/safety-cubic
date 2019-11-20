@@ -1,8 +1,10 @@
 {
+    "/core/js/jquery.mask/jquery.mask.min.js": "/core/js/jquery.mask/jquery.mask.min.js",
     "/themes/reveal/js/contactform.js": "/themes/reveal/js/contactform.js",
     "/themes/reveal/js/main.js": "/themes/reveal/js/main.js",
     "/themes/stisla/js/stisla.js": "/themes/stisla/js/stisla.js",
     "/themes/stisla/js/template.js": "/themes/stisla/js/template.js",
+    "/core/css/courses_styles.css": "/core/css/courses_styles.css",
     "/themes/stisla/css/stisla.css": "/themes/stisla/css/stisla.css",
     "/themes/reveal/css/style.css": "/themes/reveal/css/style.css",
     "/themes/reveal/css/fonts.css": "/themes/reveal/css/fonts.css"

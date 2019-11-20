@@ -18,9 +18,9 @@ interface InstitutionalInterface {
     public function all();
 
     /**
-    * return Mission, Vision and Values
+    * return mixed
      */
-    public function principles();
+    public function about();
 
 
 }

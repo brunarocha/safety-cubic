@@ -8,10 +8,11 @@
 
 return [
     'home'          => 'Início',
-    'about'         => 'Sobre Nós',
-    'director'      => 'Diretor',
+    'about'         => 'Quem Somos',
+    'direction'     => 'Diretoria',
     'free_courses'  => 'Cursos Livres',
     'consulting'    => 'Consultoria',
+    'training'      => 'Treinamentos',
     'publication'   => 'Publicações',
     'clients'       => 'Clientes',
     'contact'       => 'Contato',

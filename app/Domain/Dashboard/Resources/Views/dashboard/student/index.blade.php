@@ -5,26 +5,41 @@
 @section('container')
 
     @component('core::components.theme-stisla.partials.header', [
-        'title'      => trans('dashboard::menu.label_my_courses'),
+        'title'      => trans('dashboard::menu.label_my_trainings'),
         'breadcrumb' => []
     ]) @endcomponent
 
     <div class="row">
 
-        @foreach($courses as $course)
+        @foreach($trainings as $training)
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
+                {{--<div class="card card-statistic-1">
                     <div class="card-icon bg-primary">
-                        {{--<i class="far fa-chart-line"></i>--}}
-                        {{--<i class="{{$course->picture}}"></i>--}}
+                        --}}{{--<i class="far fa-chart-line"></i>--}}{{--
+                        --}}{{--<i class="{{$course->picture}}"></i>--}}{{--
                         <i class="far fa-line-chart"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>{{--{{$course->name_pt_br}}--}}</h4>
+                            <h4>--}}{{--{{$course->name_pt_br}}--}}{{--</h4>
                         </div>
                         <div class="card-body">
-                            <a href="{{route('student.courses.show', $course->id)}}">{{$course->name_pt_br}}</a>
+                            --}}{{--<a href="{{route('student.trainings.show', $training->id)}}">{{$training->name_pt_br}}</a>--}}{{--
+                            <a href="#">{{$training->name_pt_br}}</a>
+                        </div>
+                    </div>
+                </div>--}}
+                <div class="card">
+                    <div class="card-header">
+                        <h4> <a href="{{route('student.trainings.show', $training->id)}}">{{$training->name_pt_br}}</a></h4>
+                    </div>
+                    <div class="card-body">
+                        This is some text within a card body.
+                        Instructor
+                    </div>
+                    <div class="card-footer">
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                         </div>
                     </div>
                 </div>

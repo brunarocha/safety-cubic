@@ -9,9 +9,10 @@
 return [
     'home'          => 'Home',
     'about'         => 'About Us',
-    'director'      => 'Director',
+    'direction'     => 'Direction',
     'free_courses'  => 'Free Courses',
     'consulting'    => 'Consulting',
+    'training'      => 'Trainings',
     'publication'   => 'Publications',
     'clients'       => 'Customers',
     'contact'       => 'Contact',

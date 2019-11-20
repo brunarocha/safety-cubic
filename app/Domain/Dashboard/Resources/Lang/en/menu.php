@@ -6,7 +6,7 @@ return [
      * Administrator
      * */
     'label_registers'       => 'Registers',
-    'label_courses'         => 'Courses',
+    'label_trainings'       => 'Trainings',
     'label_institutional'   => 'Institutional',
     'label_site'            => 'Site',
     'label_company'         => 'Company',
@@ -18,7 +18,7 @@ return [
     /*
      * Student
      * */
-    'label_my_courses'      => 'My Courses',
+    'label_my_trainings'    => 'My Trainings',
     'label_course_material' => 'Course Material',
     'label_newsletters'     => 'Newsletters',
     'label_forum'           => 'Forum',

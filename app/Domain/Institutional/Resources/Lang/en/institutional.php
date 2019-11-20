@@ -25,7 +25,12 @@ return [
     'login_register' => 'Login or Register',
     'mission'        => 'Mission',
     'vision'         => 'Vision',
-    'value'          => 'Values',
+    'values'         => 'Values',
+    'about'          => 'About Us',
+    'schools'        => "School's",
+    'companies'      => 'Companies',
+    'consulting_school'  => 'School Consulting',
+    'consulting_company' => 'Companies Consulting',
 
     /*
      * Texts
@@ -36,6 +41,7 @@ return [
     'text_mission'      => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'text_vision'       => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'text_values'       => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'text_training'     => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 
     /*
      * Form Contact

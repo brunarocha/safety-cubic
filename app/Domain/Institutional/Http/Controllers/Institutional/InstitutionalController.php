@@ -5,14 +5,17 @@
  */
 namespace App\Domain\Institutional\Http\Controllers\Institutional;
 
-use App\Domain\Course\Repositories\CourseInterface;
+use App\Domain\Institutional\Mail\ContactMail;
+use App\Domain\Training\Repositories\TrainingCategoryInterface;
 use App\Domain\Company\Repositories\Company\CompanyInterface;
 use App\Domain\Institutional\Repositories\Institutional\InstitutionalInterface;
 use App\Domain\Institutional\Repositories\Institutional\Menu\MenuInterface;
 use App\Domain\Institutional\Repositories\Institutional\Testimonial\TestimonialInterface;
 use App\Domain\Institutional\Repositories\Institutional\Video\InstitutionalVideoInterface;
+use App\Domain\Training\Repositories\TrainingInterface;
 use \App\Support\Http\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * Class InstitutionalController
@@ -23,14 +26,16 @@ class InstitutionalController extends Controller {
      * @var MenuInterface
      * @var InstitutionalVideoInterface
      * @var InstitutionalInterface
-     * @var CourseInterface
+     * @var TrainingInterface
+     * @var TrainingCategoryInterface
      * @var TestimonialInterface
      * @var CompanyInterface
      */
     protected $menus;
     protected $institutional;
     protected $videos;
-    protected $courses;
+    protected $trainings;
+    protected $trainingsCategories;
     protected $testimonials;
     protected $company;
 
@@ -39,7 +44,8 @@ class InstitutionalController extends Controller {
      * @param MenuInterface $menuInterface
      * @param InstitutionalInterface $institutionalInterface
      * @param InstitutionalVideoInterface $videoInterface
-     * @param CourseInterface $courseInterface
+     * @param TrainingInterface $trainingInterface
+     * @param TrainingCategoryInterface $trainingsCategoriesInterface
      * @param TestimonialInterface $testimonialInterface
      * @param CompanyInterface $companyInterface
      */
@@ -48,7 +54,8 @@ class InstitutionalController extends Controller {
         MenuInterface $menuInterface,
         InstitutionalInterface $institutionalInterface,
         InstitutionalVideoInterface $videoInterface,
-        CourseInterface $courseInterface,
+        TrainingInterface $trainingInterface,
+        TrainingCategoryInterface $trainingsCategoriesInterface,
         TestimonialInterface $testimonialInterface,
         CompanyInterface $companyInterface
     )
@@ -56,7 +63,8 @@ class InstitutionalController extends Controller {
         $this->menus          = $menuInterface;
         $this->videos         = $videoInterface;
         $this->institutional  = $institutionalInterface;
-        $this->courses        = $courseInterface;
+        $this->trainingsCategories = $trainingsCategoriesInterface;
+        $this->trainings      = $trainingInterface;
         $this->testimonials   = $testimonialInterface;
         $this->company        = $companyInterface;
     }
@@ -66,41 +74,66 @@ class InstitutionalController extends Controller {
         return view('institutional::institutional.index')->with([
             'menus'         => $this->menus->all(),
             'videos'        => $this->videos->all(),
-            'courses'       => $this->courses->all(),
+            'trainings_categories' => $this->trainingsCategories->all(),
+            'trainings'     => $this->trainings->all(),
             'company'       => $this->company->show(1),
-            'principles'    => $this->institutional->principles(),
+            'about'         => $this->institutional->about(),
             'testimonials'  => $this->testimonials->all()
         ]);
     }
 
-    public function create()
+    public function consultingSchool()
     {
-
+        return view('institutional::institutional.consulting.school')->with([
+            'menus'         => $this->menus->all(),
+            'company'       => $this->company->show(1),
+            'about'         => $this->institutional->about(),
+        ]);
     }
 
-    public function store(Request $request)
+    public function consultingCompany()
     {
-
+        return view('institutional::institutional.consulting.company')->with([
+            'menus'         => $this->menus->all(),
+            'company'       => $this->company->show(1),
+            'about'         => $this->institutional->about(),
+        ]);
     }
 
-    public function edit($id)
+    public function contact(Request $request)
     {
+        //Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
+        Mail::to($request->get('email'))->later(1, new ContactMail($request->all()));
+        Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
+        //Mail::to('brunas3r@gmail.com')->later(1, new ContactMail($request->all()));
 
+        return response()->json($request->get('email'));
+
+//        dd($request->all());
+//
+//
+//
+//        var_dump($request->all());
+//        dd('aqui');
     }
 
-    public function update(Request $request, $id)
+    public function viewcontact()
     {
-
+        return view('institutional::institutional.mail.send');
     }
 
-    public function delete($id)
-    {
 
-    }
 
-    public function show($id)
-    {
+    public function create(){}
 
-    }
+    public function store(Request $request){}
+
+    public function edit($id){}
+
+    public function update(Request $request, $id){}
+
+    public function delete($id){}
+
+    public function show($id){}
 
 }

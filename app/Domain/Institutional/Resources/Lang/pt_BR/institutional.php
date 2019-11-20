@@ -27,7 +27,11 @@ return [
     'mission'        => 'Missão',
     'vision'         => 'Visão',
     'values'         => 'Valores',
-
+    'about'          => 'Quem Somos',
+    'schools'        => 'Escolas',
+    'companies'      => 'Empresas',
+    'consulting_school'  => 'Consultoria para Escolas',
+    'consulting_company' => 'Consultoria para Empresas',
 
     /*
      * Texts
@@ -38,6 +42,7 @@ return [
     'text_mission'      => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'text_vision'       => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'text_values'       => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'text_training'     => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 
     /*
      * Form Contact

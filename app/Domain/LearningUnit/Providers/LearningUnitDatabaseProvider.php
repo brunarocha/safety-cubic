@@ -7,8 +7,10 @@
 
 namespace App\Domain\LearningUnit\Providers;
 
-use App\Domain\LearningUnit\Database\Migrations\CreateCourseMaterialTable;
-use App\Domain\LearningUnit\Database\Seeds\CreateCourseMaterialSeed;
+use App\Domain\LearningUnit\Database\Migrations\CreateTrainingMaterialTable;
+use App\Domain\LearningUnit\Database\Migrations\CreateTrainingsUsersTable;
+use App\Domain\LearningUnit\Database\Seeds\CreateTrainingMaterialSeed;
+use App\Domain\LearningUnit\Database\Seeds\CreateTrainingsUsersSeed;
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
 
@@ -28,11 +30,13 @@ class LearningUnitDatabaseProvider extends ServiceProvider
     public function register()
     {
         $this->migrations([
-            CreateCourseMaterialTable::class
+            CreateTrainingMaterialTable::class,
+            CreateTrainingsUsersTable::class
         ]);
 
         $this->seeders([
-            CreateCourseMaterialSeed::class
+            CreateTrainingMaterialSeed::class,
+            CreateTrainingsUsersSeed::class
         ]);
     }
 }

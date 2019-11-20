@@ -28,11 +28,8 @@ class DashboardController extends Controller
             return view('dashboard::dashboard.admin.index');
 
         } else if(auth()->user()->hasRole('student')){
-            $user = $this->users->show(auth()->user()->id);
 
-            return view('dashboard::dashboard.student.index')->with([
-                'courses' => $user->courses
-            ]);
+            return redirect()->route('student.trainings.index');
         }
 
         dd('other user');

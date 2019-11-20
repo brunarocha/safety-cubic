@@ -16,8 +16,10 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
 
     /**
      * @var $menu
+     * @var $model
      */
     protected $menu;
+    protected $model;
 
     /**
      * MenuRepository constructor.
@@ -33,7 +35,15 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
      */
     public function all()
     {
-        $items = $this->menusWithoutRoutes();
+        $items = [
+            'home',
+            'about',
+            'direction',
+            'consulting',
+            'training',
+            'publication',
+            'contact',
+        ];
         $menus = [];
 
         foreach($items as $key => $value){
@@ -45,20 +55,6 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
         }
 
         return $menus;
-    }
-
-    public function menusWithoutRoutes()
-    {
-        return [
-            'home',
-            'about',
-            //'free_courses',
-            'consulting',
-            'director',
-            'publication',
-            //'clients',
-            'contact',
-        ];
     }
 
 }

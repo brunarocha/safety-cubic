@@ -11,50 +11,47 @@
             @role('administrator'))
                 {{-- Menu Institucional --}}
                 @component('core::components.theme-stisla.menus.li-dropdown', [
-                    'title'      => trans('dashboard::menu.label_institutional'),
+                    'title'      => 'Institucional',
                     'icon_class' => 'far fa-file-alt',
                     'links'      => [
-                        //trans('core::menu.label_site')      => '#',
-                        trans('dashboard::menu.label_company')   => route('company.edit', 1),
-                        trans('dashboard::menu.label_videos')    => '#',
-                        trans('dashboard::menu.label_courses')   => '#',
+                        'Empresa'       => route('company.edit', 1),
+                        'Videos'        => '#',
+                        'Treinamentos'  => route('admin.trainings.index'),
                     ]
                 ]) @endcomponent
 
                 {{-- Menu Cadastros --}}
                 @component('core::components.theme-stisla.menus.li-dropdown', [
-                    'title'      => trans('dashboard::menu.label_registers'),
+                    'title'      => 'Cadastros',
                     'icon_class' => 'far fa-file-alt',
                     'links'      => [
-                        trans('dashboard::menu.label_instructors') => '#',
-                        trans('dashboard::menu.label_students')    => '#',
+                        'Instrutores' => '#',
+                        'Estudantes'  => '#',
                     ]
                 ]) @endcomponent
             @endrole
 
             @role('student')
-                @if(!request()->is('dashboard'))
-                    <li>
-                        <a class="nav-link" href="credits.html">
-                            <i class="fas fa-pencil-ruler"></i>
-                            <span>{{trans('dashboard::menu.label_course_material')}}</span>
-                        </a>
-                    </li>
+                <li class="{{request()->is('student/trainings/*') ? 'active' : ''}}">
+                    <a class="nav-link" href="credits.html">
+                        <i class="fas fa-th-large"></i>
+                        <span>{{trans('dashboard::menu.label_my_trainings')}}</span>
+                    </a>
+                </li>
 
-                    <li>
-                        <a class="nav-link" href="credits.html">
-                            <i class="fas fa-pencil-ruler"></i>
-                            <span>{{trans('dashboard::menu.label_newsletters')}}</span>
-                        </a>
-                    </li>
+                <li>
+                    <a class="nav-link" href="credits.html">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <span>{{trans('dashboard::menu.label_newsletters')}}</span>
+                    </a>
+                </li>
 
-                    <li>
-                        <a class="nav-link" href="credits.html">
-                            <i class="fas fa-pencil-ruler"></i>
-                            <span>{{trans('dashboard::menu.label_forum')}}</span>
-                        </a>
-                    </li>
-                @endif
+                <li>
+                    <a class="nav-link" href="credits.html">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <span>{{trans('dashboard::menu.label_forum')}}</span>
+                    </a>
+                </li>
             @endrole
 
 

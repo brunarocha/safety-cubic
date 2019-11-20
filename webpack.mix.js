@@ -32,7 +32,12 @@ var paths = {
 * */
 
 // Images
-mix.copyDirectory(paths.core.dev+'/img', paths.core.dist+'/img');
+//mix.copyDirectory(paths.core.dev+'/img', paths.core.dist+'/img');
+mix.js([paths.core.dev+'/js/jquery.mask/jquery.mask.min.js'], paths.core.dist+'/js/jquery.mask/jquery.mask.min.js');
+mix.styles([
+    paths.core.dev+'/css/list-courses/courses_responsive.css',
+    paths.core.dev+'/css/list-courses/courses_styles.css'
+], paths.core.dist+'/css/courses_styles.css');
 
 /*
 * Theme Stisla
