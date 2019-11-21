@@ -107,7 +107,7 @@ class InstitutionalController extends Controller {
         Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
         //Mail::to('brunas3r@gmail.com')->later(1, new ContactMail($request->all()));
 
-        return response()->json($request->get('email'));
+        return response()->json(true);
 
 //        dd($request->all());
 //
@@ -120,6 +120,11 @@ class InstitutionalController extends Controller {
     public function viewcontact()
     {
         return view('institutional::institutional.mail.send');
+    }
+
+    public function viewcontactteste()
+    {
+        return view('institutional::institutional.mail.contact');
     }
 
 

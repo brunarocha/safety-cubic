@@ -322,8 +322,10 @@
 @section('js_specific')
     <!-- Contact Form JavaScript File -->
     {{--<script src="{{asset('themes/reveal/js/contactform.js')}}"></script>--}}
+    <script src="{{asset('themes/stisla/modules/sweetalert/sweetalert.min.js')}}"></script>
 
     <script>
+
         jQuery(document).ready(function($) {
             "use strict";
 
@@ -426,21 +428,22 @@
                    data: str,
                    success: function(msg) {
                        console.log(msg)
-                     // alert(msg);
-                     /*if (msg == 'OK') {
-                       $("#sendmessage").addClass("show");
-                       $("#errormessage").removeClass("show");
-                       $('.contactForm').find("input, textarea").val("");
-                     } else {
-                       $("#sendmessage").removeClass("show");
-                       $("#errormessage").addClass("show");
-                       $('#errormessage').html(msg);
-                     }*/
+                       swal({
+                           position: 'center',
+                           text: 'Mensagem enviada com sucesso!',
+                           icon: 'success',
+                           button: false,
+                           timer: 10000
+                       })
 
                    }, error: function(error, file, m){
-                       console.log(error)
-                       console.log(file)
-                       console.log(m)
+                         swal({
+                             position: 'center',
+                             text: 'Ocorreu um erro ao enviar mensagem. Tente novamente ou entre em contato pelo email comercial@safetycubic.com.br',
+                             icon: 'error',
+                             button: false,
+                             timer: 10000
+                         })
                      }
                  });
                 return false;

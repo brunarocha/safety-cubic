@@ -23,3 +23,4 @@ Route::prefix('treinamentos')->group(function () {
 
 Route::post('/contact', 'Institutional\InstitutionalController@contact')->name('institutional.contact');
 Route::get('/contact', 'Institutional\InstitutionalController@viewcontact');
+Route::get('/contactTeste', 'Institutional\InstitutionalController@viewcontactteste');

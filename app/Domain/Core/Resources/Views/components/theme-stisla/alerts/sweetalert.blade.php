@@ -10,7 +10,8 @@
                 text: '{{Session::get('message')}}',
                 icon: 'success',
                 button: false,
-                timer: 3000
+                timer: 3000,
+                align: 'center'
             })
         };
     </script>
@@ -24,7 +25,8 @@
                 text: '{{Session::get('error')}}',
                 icon: 'error',
                 button: false,
-                timer: 3000
+                timer: 3000,
+                align: 'center'
             })
         };
     </script>

@@ -39,7 +39,7 @@ class ContactMail extends Mailable
             ->with(array('data' => $this->data));*/
         return $this->subject($this->data['subject'] . ' - Safety Cubic Contato')
             ->from('info@safetycubic.com.br', 'Safety Cubic - Contato')
-            ->view('institutional::institutional.mail.send')
+            ->view('institutional::institutional.mail.contact')
             ->with(array('data' => $this->data));
     }
 
