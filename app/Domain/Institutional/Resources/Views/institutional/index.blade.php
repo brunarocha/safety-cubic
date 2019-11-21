@@ -188,13 +188,13 @@
         <!--==========================
           Instituional Videos Section
         ============================-->
-        @component('core::components.theme-reveal.section', [
+        {{--@component('core::components.theme-reveal.section', [
             'id'    => 'instituional-videos',
             'title' => trans('institutional::menu.videos'),
             'text'  => '',
         ])
             <div class="row">
-                {{--@foreach($courses as $key => $course)
+                --}}{{--@foreach($courses as $key => $course)
                     <div class="col-lg-6">
                         <div class="box wow {{$key%2 == 0 ? 'fadeInLeft' : 'fadeInRight'}} ">
                             <div class="icon"><i class="{{$course->picture}}"></i></div>
@@ -202,7 +202,7 @@
                             <p class="description">{{config('app.locale') == 'pt_BR' ? $course->description_pt_br : $course->description_en}}</p>
                         </div>
                     </div>
-                @endforeach--}}
+                @endforeach--}}{{--
                 <div class="col-lg-6">
                     <div class="box wow fadeInLeft">
                         <iframe class="embed-responsive-item" width="100%" height="315" src="https://www.youtube.com/embed/R1CiN6esbkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
             </div>
-        @endcomponent
+        @endcomponent--}}
         <!-- #instituional videos -->
 
 
