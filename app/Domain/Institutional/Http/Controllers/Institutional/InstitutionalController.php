@@ -103,7 +103,7 @@ class InstitutionalController extends Controller {
     public function contact(Request $request)
     {
         //Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
-        Mail::to($request->get('email'))->later(1, new ContactMail($request->all()));
+        //Mail::to($request->get('email'))->later(1, new ContactMail($request->all()));
         Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
         //Mail::to('brunas3r@gmail.com')->later(1, new ContactMail($request->all()));
 

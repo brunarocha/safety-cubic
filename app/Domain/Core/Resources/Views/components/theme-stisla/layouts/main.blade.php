@@ -20,7 +20,8 @@
 
     @yield('css_specific')
 
-    <link rel="shortcut icon" href="https://isotermik.com/wp-content/uploads/2017/02/favico-1.png" type="image/x-icon" />
+    {{--<link rel="shortcut icon" href="https://isotermik.com/wp-content/uploads/2017/02/favico-1.png" type="image/x-icon" />--}}
+    <link rel="shortcut icon" href="{{asset('/storage/core/img/institutional/favicon.png')}}" type="image/x-icon" />
 
     <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
@@ -67,6 +68,7 @@
 <script src="{{asset('themes/stisla/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/moment.min.js')}}"></script>
 <script src="{{asset('themes/stisla/js/stisla.js')}}"></script>
+<script src="{{asset('themes/stisla/modules/sweetalert/sweetalert.min.js')}}"></script>
 
 <!-- JS Libraies -->
 <script src="{{asset('themes/stisla/modules/jquery.sparkline.min.js')}}"></script>
@@ -74,7 +76,6 @@
 <script src="{{asset('themes/stisla/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/summernote/summernote-bs4.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/chocolat/dist/js/jquery.chocolat.min.js')}}"></script>
-<script src="{{asset('themes/stisla/modules/sweetalert/sweetalert.min.js')}}"></script>
 
 <!-- Template JS File -->
 <script src="{{asset('themes/stisla/js/template.js')}}"></script>

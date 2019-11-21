@@ -8,7 +8,7 @@
         </div>
         <ul class="sidebar-menu">
 
-            @role('administrator'))
+            @role('administrator')
                 {{-- Menu Institucional --}}
                 @component('core::components.theme-stisla.menus.li-dropdown', [
                     'title'      => 'Institucional',

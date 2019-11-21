@@ -56,7 +56,7 @@ class CompanyController extends Controller {
         $this->company->update($request->all(), $id);
         $company = $this->company->show($id);
 
-        return redirect()->route('company.edit', $id)->with(['company' => $company]);
+        return redirect()->route('company.edit', $id)->with(['company' => $company, 'message' => 'Alterado com sucesso!']);
     }
 
     public function delete($id)

@@ -8,8 +8,7 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="{{asset('themes/reveal/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('themes/reveal/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <link rel="shortcut icon" href="{{asset('/storage/core/img/institutional/favicon.png')}}" type="image/x-icon" />
 
     <!-- Google Fonts -->
     <link href="{{asset('themes/reveal/css/fonts.css')}}" rel="stylesheet">

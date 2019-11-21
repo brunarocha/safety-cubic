@@ -1,17 +1,19 @@
-@extends('core::components.theme-stisla.layouts.main', ['title' => 'Dashboard'])
+@extends('core::components.theme-stisla.layouts.main', ['title' => 'Editar Empresa'])
 
 @section('css_specific') @endsection
 
 @section('container')
 
         @component('core::components.theme-stisla.partials.header', [
-            'title'      => trans('dashboard::menu.label_company'),
-            'title_card' => trans('company::form.label_edit'),
+            'title'      => '', //trans('dashboard::menu.label_company'),
+            'title_card' => 'Editar Empresa', //trans('company::form.label_edit'),
             'breadcrumb' => [
-                trans('dashboard::menu.label_institutional'),
-                trans('dashboard::menu.label_company'),
+                'Institucional', //trans('dashboard::menu.label_institutional'),
+                'Empresa', //trans('dashboard::menu.label_company'),
             ]
         ]) @endcomponent
+
+        @component('core::components.theme-stisla.alerts.sweetalert') @endcomponent
 
         <div class="section-body">
             <form class="needs-validation" action="{{route('company.update', $company->id)}}" method="POST" novalidate="">
@@ -22,44 +24,44 @@
 
                         <div class="card">
                             @component('core::components.theme-stisla.cards.header', [
-                                'title' => trans('company::form.label_edit')
+                                'title' => 'Editar Empresa', //trans('company::form.label_edit')
                             ])@endcomponent
 
                             <div class="card-body">
 
                                 <div class="row">
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_register'),
+                                        'label'     => 'CNPJ', //trans('company::form.label_register'),
                                         'name'      => 'register',
                                         'value'     => $company->register,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o CNPJ",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-6',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_social_name'),
+                                        'label'     => 'Razão Social', //trans('company::form.label_social_name'),
                                         'name'      => 'social_name',
                                         'value'     => $company->social_name,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe a Razão Social",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-6',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_fancy_name'),
+                                        'label'     => 'Nome Fantasia', //trans('company::form.label_fancy_name'),
                                         'name'      => 'fancy_name',
                                         'value'     => $company->fancy_name,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o Nome Fantasia",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-6',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_email'),
+                                        'label'     => 'Email', //trans('company::form.label_email'),
                                         'name'      => 'email',
                                         'value'     => $company->email,
-                                        'error_msg' => "Oh no! Email is invalid.",
+                                        'error_msg' => "Informe o Email",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-6',
                                     ])@endcomponent
@@ -67,28 +69,28 @@
 
                                 <div class="row">
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_phone'),
+                                        'label'     => 'Telefone', //trans('company::form.label_phone'),
                                         'name'      => 'phone',
                                         'value'     => $company->phone,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o Telefone",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-4',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_zip_code'),
+                                        'label'     => 'CEP', //trans('company::form.label_zip_code'),
                                         'name'      => 'zip_code',
                                         'value'     => $company->zip_code,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o CEP",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-2',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_address'),
+                                        'label'     => 'Endereço', //trans('company::form.label_address'),
                                         'name'      => 'address',
                                         'value'     => $company->address,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o Endereço",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-6',
                                     ])@endcomponent
@@ -96,37 +98,37 @@
 
                                 <div class="row">
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_address_number'),
+                                        'label'     => 'Número', //trans('company::form.label_address_number'),
                                         'name'      => 'address_number',
                                         'value'     => $company->address_number,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o Número",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-6 col-lg-2',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_city'),
+                                        'label'     => 'Cidade', //trans('company::form.label_city'),
                                         'name'      => 'city',
                                         'value'     => $company->city,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe a Cidade",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-4 col-lg-5',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_state'),
+                                        'label'     => 'Estado', //trans('company::form.label_state'),
                                         'name'      => 'state',
                                         'value'     => $company->state,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o Estado",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-4 col-lg-2',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => trans('company::form.label_country'),
+                                        'label'     => 'País', //trans('company::form.label_country'),
                                         'name'      => 'country',
                                         'value'     => $company->country,
-                                        'error_msg' => "What's your name?",
+                                        'error_msg' => "Informe o País",
                                         'required'  => true,
                                         'class_col' => 'col-12 col-md-4 col-lg-3',
                                     ])@endcomponent

@@ -1,7 +1,7 @@
 <?php
 
 
-Route::resource('/company', 'Company\CompanyController')->names([
+Route::resource('/institucional/empresa', 'Company\CompanyController')->names([
     'index'  => 'company.index',
     'create' => 'company.create',
     'store'  => 'company.store',
