@@ -111,28 +111,6 @@
 
 
         <!--==========================
-          Training Section
-        ============================-->
-        @component('core::components.theme-reveal.section', [
-            'id'    => 'training',
-            'title' => trans('institutional::menu.training'),
-            'text'  => '', //trans('institutional::institutional.text_training'),
-            'additional_class' => 'style-testimonials wow fadeInUp',
-        ])
-            <div class="owl-carousel testimonials-carousel" {{--style="padding: 0"--}}>
-                @foreach($trainings_categories as $training)
-                    <div class="testimonial-item" {{--style="width: 40%;"--}}>
-                        <a href="{{route('institutional.training.index',  config('app.locale') == 'en' ? $training->name_slug_en : $training->name_slug_pt_br )}}">
-                            <img src="{{asset($training->picture)}}" class="testimonial-img" style="width: 130px; height: 130px" alt="">
-                            <h3>{{$training->name_pt_br}}</h3>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        @endcomponent
-        <!-- #training -->
-
-        <!--==========================
           Consulting Section
         ============================-->
         @component('core::components.theme-reveal.section', [
@@ -156,6 +134,28 @@
             </div>
         @endcomponent
         <!-- #consulting -->
+
+        <!--==========================
+          Training Section
+        ============================-->
+        @component('core::components.theme-reveal.section', [
+            'id'    => 'training',
+            'title' => trans('institutional::menu.training'),
+            'text'  => '', //trans('institutional::institutional.text_training'),
+            'additional_class' => 'style-testimonials wow fadeInUp',
+        ])
+            <div class="owl-carousel testimonials-carousel" {{--style="padding: 0"--}}>
+                @foreach($trainings_categories as $training)
+                    <div class="testimonial-item" {{--style="width: 40%;"--}}>
+                        <a href="{{route('institutional.training.index',  config('app.locale') == 'en' ? $training->name_slug_en : $training->name_slug_pt_br )}}">
+                            <img src="{{asset($training->picture)}}" class="testimonial-img" style="width: 130px; height: 130px" alt="">
+                            <h3>{{$training->name_pt_br}}</h3>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+    @endcomponent
+    <!-- #training -->
 
 
         {{--<!--==========================
