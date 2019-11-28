@@ -15,6 +15,7 @@ return [
     'training'      => 'Treinamentos',
     'publication'   => 'Publicações',
     'clients'       => 'Clientes',
+    'partners'      => 'Parceiros',
     'contact'       => 'Contato',
     'login'         => 'Entrar',
     'testimonials'  => 'Depoimentos',
