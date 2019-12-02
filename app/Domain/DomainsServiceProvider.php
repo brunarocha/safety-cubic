@@ -10,6 +10,8 @@ namespace App\Domain;
 
 use App\Domain\Company\Providers\CompanyServiceProvider;
 use App\Domain\Core\Providers\CoreServiceProvider;
+use App\Domain\InstitutionalVideo\Providers\InstitutionalVideoServiceProvider;
+use App\Domain\Publication\Providers\PublicationServiceProvider;
 use App\Domain\Training\Providers\TrainingServiceProvider;
 use App\Domain\Dashboard\Providers\DashboardServiceProvider;
 use App\Domain\Institutional\Providers\InstitutionalServiceProvider;
@@ -33,10 +35,12 @@ class DomainsServiceProvider extends ServiceProvider
         $this->app->register(UserServiceProvider::class);
         $this->app->register(DashboardServiceProvider::class);
         $this->app->register(CoreServiceProvider::class);
+        $this->app->register(InstitutionalVideoServiceProvider::class);
         $this->app->register(InstitutionalServiceProvider::class);
         $this->app->register(TrainingServiceProvider::class);
         $this->app->register(CompanyServiceProvider::class);
         $this->app->register(LearningUnitServiceProvider::class);
+        $this->app->register(PublicationServiceProvider::class);
     }
 
     /**

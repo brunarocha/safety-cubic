@@ -14,9 +14,9 @@
                     'title'      => 'Institucional',
                     'icon_class' => 'far fa-file-alt',
                     'links'      => [
-                        'Empresa'       => route('company.edit', 1),
-                        'Videos'        => '#',
-                        'Treinamentos'  => route('admin.trainings.index'),
+                        ['title' => 'Empresa',      'link' => route('company.edit', 1),         'active' => request()->is('/cadastros/empresa') || request()->is('/cadastros/empresa/*')],
+                        ['title' => 'Videos',       'link' => '#',                              'active' => false],
+                        ['title' => 'Treinamentos', 'link' => route('admin.trainings.index'),   'active' => request()->is('/cadastros/treinamentos') || request()->is('/cadastros/treinamentos/*')],
                     ]
                 ]) @endcomponent
 
@@ -25,13 +25,14 @@
                     'title'      => 'Cadastros',
                     'icon_class' => 'far fa-file-alt',
                     'links'      => [
-                        'Instrutores' => '#',
-                        'Estudantes'  => '#',
+                        //['title' => 'Instrutores', 'link' => '#', 'active' => false],
+                        //['title' => 'Estudantes',  'link' => '#', 'active' => false],
+                        ['title' => 'Publicações', 'link' => route('publication.admin.index'), 'active' => request()->is('cadastros/publicacoes') || request()->is('cadastros/publicacoes/*')]
                     ]
                 ]) @endcomponent
             @endrole
 
-            @role('student')
+            {{--@role('student')
                 <li class="{{request()->is('student/trainings/*') ? 'active' : ''}}">
                     <a class="nav-link" href="credits.html">
                         <i class="fas fa-th-large"></i>
@@ -52,7 +53,7 @@
                         <span>{{trans('dashboard::menu.label_forum')}}</span>
                     </a>
                 </li>
-            @endrole
+            @endrole--}}
 
 
 

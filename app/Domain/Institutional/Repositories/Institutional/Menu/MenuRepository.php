@@ -81,7 +81,7 @@ class MenuRepository extends AbstractRepository implements MenuInterface {
 
         array_push($menus, [
             'order'         => 'publication',
-            'url'           => '#publication',
+            'url'           => route('institutional.publication.index'),
             'display_name'  => trans('institutional::menu.publication'),
         ]);
 

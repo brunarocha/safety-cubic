@@ -18,6 +18,14 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('themes/stisla/css/stisla.css')}}">
 
+    <style>
+        /*.btn-danger {*/
+            /*background-color: #e4605e;*/
+            /*border-color: #e4605e;*/
+            /*box-shadow: 0 2px 6px #e4605e;*/
+        /*}*/
+    </style>
+
     @yield('css_specific')
 
     {{--<link rel="shortcut icon" href="https://isotermik.com/wp-content/uploads/2017/02/favico-1.png" type="image/x-icon" />--}}

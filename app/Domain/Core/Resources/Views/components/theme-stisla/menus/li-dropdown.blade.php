@@ -15,8 +15,8 @@
         <i class="{{$icon_class}}"></i> <span>{{$title}}</span>
     </a>
     <ul class="dropdown-menu" style="display: block;">
-        @foreach($links as $key => $link)
-            <li><a class="nav-link" href="{{$link}}">{{$key}}</a></li>
+        @foreach($links as $link)
+            <li class="{{$link['active'] ? 'active' : ''}}"><a class="nav-link" href="{{$link['link']}}">{{$link['title']}}</a></li>
         @endforeach
     </ul>
 </li>

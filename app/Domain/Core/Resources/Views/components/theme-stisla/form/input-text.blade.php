@@ -7,6 +7,7 @@
     'value'     => '',
     'error_msg' => '',
     'class_col' => '',
+    'disabled'  => true,
 ])@endcomponent
 --}}
 <div class="{{$class_col}}">
@@ -17,9 +18,12 @@
                {{$required ? 'required' : ''}}
                id="{{isset($id) ? $id : $name}}"
                name="{{$name}}"
-               value="{{$value}}">
-        <div class="invalid-feedback">
-            {{$error_msg}}
-        </div>
+               value="{{$value}}"
+               {{isset($disabled) ? "disabled": ""}}>
+        @if(isset($error_msg))
+            <div class="invalid-feedback">
+                {{$error_msg}}
+            </div>
+        @endif
     </div>
 </div>
