@@ -103,10 +103,9 @@ class InstitutionalController extends Controller {
     public function contact(Request $request)
     {
         Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
-        Mail::to('comercial@safetycubic.com.br')
-            ->cc('alessandro.sias@safetycubic.com.br')
-            ->cc('angelina.sias@safetycubic.com.br')
-            ->later(1, new ContactMail($request->all()));
+        Mail::to('comercial@safetycubic.com.br')->later(1, new ContactMail($request->all()));
+        Mail::to('alessandro.sias@safetycubic.com.br')->later(1, new ContactMail($request->all()));
+        Mail::to('angelina.sias@safetycubic.com.br')->later(1, new ContactMail($request->all()));
 
         return response()->json([]);
     }
