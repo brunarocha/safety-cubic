@@ -4,6 +4,8 @@
     <title>Internal_email-29</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{asset('themes/stisla/modules/fontawesome/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('themes/stisla/modules/bootstrap/css/bootstrap.min.css')}}">
     <style type="text/css">
         * {
             -ms-text-size-adjust:100%;
@@ -11,10 +13,11 @@
             -webkit-text-resize:100%;
             text-resize:100%;
         }
+
         a{
             outline:none;
             color:#40aceb;
-            text-decoration:underline;
+            /*text-decoration:underline;*/
         }
         a:hover{text-decoration:none !important;}
         .nav a:hover{text-decoration:underline !important;}
@@ -76,6 +79,13 @@
             }
             th[class="thead"]{display:table-header-group !important; width:100% !important;}
             th[class="tfoot"]{display:table-footer-group !important; width:100% !important;}
+
+            .estilo-fonte {
+                font: 16px Arial, Helvetica, sans-serif;
+                color:#292c34;
+                padding: 0 0 24px;
+                font-family: 'Nunito', 'Segoe UI', arial;
+            }
         }
     </style>
 </head>
@@ -91,6 +101,7 @@
             </table>
         </td>
     </tr>
+
     <tr>
         <td class="wrapper" style="padding:0 10px;">
             <!-- module 1 -->
@@ -123,18 +134,38 @@
                                 <td data-bgcolor="bg-block" class="holder" style="padding:65px 60px 50px;" bgcolor="#f9f9f9">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            {{--<td data-color="title" data-size="size title" data-min="20" data-max="40" data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="center" style="font:30px/33px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Nome</label>
+                                                    <input class="form-control" id="exampleFormControlInput1" value="{{$data['name']}}" disabled>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Email</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value="{{$data['email']}}" disabled>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Assunto</label>
+                                                    <input class="form-control" id="exampleFormControlInput1" value="{{$data['subject']}}" disabled>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlTextarea1">Mensagem</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" disabled>{{$data['message']}}</textarea>
+                                                </div>
+                                            </form>
+                                        </tr>
+                                        {{--<tr>
+                                            --}}{{--<td data-color="title" data-size="size title" data-min="20" data-max="40" data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="center" style="font:30px/33px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
                                                 Obrigado!
-                                            </td>--}}
+                                            </td>--}}{{--
                                             <td width="20%" data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
                                                 <label>Nome:</label>
                                             </td>
                                             <td width="80%"data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
                                                 <label>{{$data['name']}}</label>
                                             </td>
-                                        </tr>
+                                        </tr>--}}
 
-                                        <tr>
+                                        {{--<tr>
                                             <td width="20%" data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
                                                 <label>Email:</label>
                                             </td>
@@ -153,13 +184,13 @@
                                         </tr>
 
                                         <tr>
-                                            <td width="20%" data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
+                                            <td width="20%" data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px; font-family: 'Nunito', 'Segoe UI', arial;">
                                                 <label style="margin-top: 0; padding-top: 0">Mensagem:</label>
                                             </td>
-                                            <td width="80%"data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
+                                            <td width="80%"data-color="title" data-min="20" data-max="20"data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="left" style="font:16px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px; font-family: 'Nunito', 'Segoe UI', arial;">
                                                 <p>{{$data['message']}}</p>
                                             </td>
-                                        </tr>
+                                        </tr>--}}
                                     </table>
                                 </td>
                             </tr>
@@ -188,7 +219,7 @@
                                                     </tr>
                                                 </table>
                                             </th>
-                                            <th class="thead" width="200" align="left" style="vertical-align:top; padding:0;">
+                                            {{--<th class="thead" width="200" align="left" style="vertical-align:top; padding:0;">
                                                 <table class="center" align="right" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td class="btn" valign="top" style="line-height:0; padding:3px 0 0;">
@@ -209,7 +240,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                            </th>
+                                            </th>--}}
                                         </tr>
                                     </table>
                                 </td>

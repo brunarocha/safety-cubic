@@ -437,6 +437,9 @@
                        })
 
                    }, error: function(error, file, m){
+                       console.log(error)
+                       console.log(file)
+                       console.log(m)
                          swal({
                              position: 'center',
                              text: 'Ocorreu um erro ao enviar mensagem. Tente novamente ou entre em contato pelo email comercial@safetycubic.com.br',

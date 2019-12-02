@@ -102,29 +102,28 @@ class InstitutionalController extends Controller {
 
     public function contact(Request $request)
     {
-        //Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
-        //Mail::to($request->get('email'))->later(1, new ContactMail($request->all()));
         Mail::to('info@safetycubic.com.br')->later(1, new ContactMail($request->all()));
-        //Mail::to('brunas3r@gmail.com')->later(1, new ContactMail($request->all()));
+        Mail::to('comercial@safetycubic.com.br')
+            ->cc('alessandro.sias@safetycubic.com.br')
+            ->cc('angelina.sias@safetycubic.com.br')
+            ->later(1, new ContactMail($request->all()));
 
-        return response()->json(true);
-
-//        dd($request->all());
-//
-//
-//
-//        var_dump($request->all());
-//        dd('aqui');
+        return response()->json([]);
     }
 
     public function viewcontact()
     {
-        return view('institutional::institutional.mail.send');
+        return view('institutional::institutional.mail.contact');
     }
 
     public function viewcontactteste()
     {
-        return view('institutional::institutional.mail.contact');
+//        $data['subject'] = 'Assunto tese';
+//        $data['name'] = 'Bruna Rocha';
+//        $data['email'] = 'brunas3r@gmail.com';
+//        $data['message'] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ante id felis commodo interdum. Ut sapien orci, porttitor ut purus et, dapibus viverra dolor. Duis eget porta justo. Praesent et porta ligula. Curabitur a tellus eleifend nibh rutrum placerat. Fusce quis metus vulputate, imperdiet nisi et, dignissim neque. Nulla quis hendrerit sapien. Aenean non risus ut sem rutrum luctus at in metus. Sed a libero eget nisi pellentesque ullamcorper. Sed ut turpis mattis, viverra tortor vel, laoreet ex.';
+
+        return view('institutional::institutional.mail.contact');//->with(['data' => $data]);
     }
 
 

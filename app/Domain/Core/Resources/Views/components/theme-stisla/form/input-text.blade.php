@@ -14,8 +14,8 @@
         <label>{{$label}}</label>
         <input type="text"
                class="form-control"
-               {{$required ? 'required=""' : ''}}
-               {{isset($id) ? "id=$id" : ''}}
+               {{$required ? 'required' : ''}}
+               id="{{isset($id) ? $id : $name}}"
                name="{{$name}}"
                value="{{$value}}">
         <div class="invalid-feedback">

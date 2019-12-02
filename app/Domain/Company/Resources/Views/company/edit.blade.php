@@ -5,12 +5,9 @@
 @section('container')
 
         @component('core::components.theme-stisla.partials.header', [
-            'title'      => '', //trans('dashboard::menu.label_company'),
-            'title_card' => 'Editar Empresa', //trans('company::form.label_edit'),
-            'breadcrumb' => [
-                'Institucional', //trans('dashboard::menu.label_institutional'),
-                'Empresa', //trans('dashboard::menu.label_company'),
-            ]
+            'title'      => '',
+            'title_card' => 'Editar Empresa',
+            'breadcrumb' => [ 'Institucional', 'Empresa' ]
         ]) @endcomponent
 
         @component('core::components.theme-stisla.alerts.sweetalert') @endcomponent
@@ -24,23 +21,23 @@
 
                         <div class="card">
                             @component('core::components.theme-stisla.cards.header', [
-                                'title' => 'Editar Empresa', //trans('company::form.label_edit')
+                                'title' => 'Editar Empresa',
                             ])@endcomponent
 
                             <div class="card-body">
 
                                 <div class="row">
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'CNPJ', //trans('company::form.label_register'),
+                                        'label'     => 'CNPJ',
                                         'name'      => 'register',
                                         'value'     => $company->register,
                                         'error_msg' => "Informe o CNPJ",
                                         'required'  => true,
-                                        'class_col' => 'col-12 col-md-6 col-lg-6',
+                                        'class_col' => 'cnpj col-12 col-md-6 col-lg-6',
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Razão Social', //trans('company::form.label_social_name'),
+                                        'label'     => 'Razão Social',
                                         'name'      => 'social_name',
                                         'value'     => $company->social_name,
                                         'error_msg' => "Informe a Razão Social",
@@ -49,7 +46,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Nome Fantasia', //trans('company::form.label_fancy_name'),
+                                        'label'     => 'Nome Fantasia',
                                         'name'      => 'fancy_name',
                                         'value'     => $company->fancy_name,
                                         'error_msg' => "Informe o Nome Fantasia",
@@ -58,7 +55,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Email', //trans('company::form.label_email'),
+                                        'label'     => 'Email',
                                         'name'      => 'email',
                                         'value'     => $company->email,
                                         'error_msg' => "Informe o Email",
@@ -69,7 +66,7 @@
 
                                 <div class="row">
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Telefone', //trans('company::form.label_phone'),
+                                        'label'     => 'Telefone',
                                         'name'      => 'phone',
                                         'value'     => $company->phone,
                                         'error_msg' => "Informe o Telefone",
@@ -78,7 +75,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'CEP', //trans('company::form.label_zip_code'),
+                                        'label'     => 'CEP',
                                         'name'      => 'zip_code',
                                         'value'     => $company->zip_code,
                                         'error_msg' => "Informe o CEP",
@@ -87,7 +84,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Endereço', //trans('company::form.label_address'),
+                                        'label'     => 'Endereço',
                                         'name'      => 'address',
                                         'value'     => $company->address,
                                         'error_msg' => "Informe o Endereço",
@@ -98,7 +95,7 @@
 
                                 <div class="row">
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Número', //trans('company::form.label_address_number'),
+                                        'label'     => 'Número',
                                         'name'      => 'address_number',
                                         'value'     => $company->address_number,
                                         'error_msg' => "Informe o Número",
@@ -107,7 +104,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Cidade', //trans('company::form.label_city'),
+                                        'label'     => 'Cidade',
                                         'name'      => 'city',
                                         'value'     => $company->city,
                                         'error_msg' => "Informe a Cidade",
@@ -116,7 +113,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'Estado', //trans('company::form.label_state'),
+                                        'label'     => 'Estado',
                                         'name'      => 'state',
                                         'value'     => $company->state,
                                         'error_msg' => "Informe o Estado",
@@ -125,7 +122,7 @@
                                     ])@endcomponent
 
                                     @component('core::components.theme-stisla.form.input-text', [
-                                        'label'     => 'País', //trans('company::form.label_country'),
+                                        'label'     => 'País',
                                         'name'      => 'country',
                                         'value'     => $company->country,
                                         'error_msg' => "Informe o País",
@@ -151,5 +148,30 @@
 
 @section('js_specific')
     <!-- Page Specific JS File -->
+
+
+    <script>
+        //console.log($("#register")[0])
+        //$('input[name="register"]').mask('00.000.000/0000-00', {reverse: true});
+
+
+//        $(function() {
+//            $('#register').mask('00.000.000/0000-00', {reverse: true});
+//        })
+
+//            $('document').ready(function() {
+//                $("#register").mask("00.000.000/0000-00");
+//            });
+
+//        $(document).ready(function($){
+//            $('#register').mask('00.000.000/0000-00', {reverse: true});
+//        })
+
+        $(document).ready(function(){
+            console.log($('#register').mask("00.000.000/0000-00"))
+        });
+
+
+    </script>
 
 @endsection

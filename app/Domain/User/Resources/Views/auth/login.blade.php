@@ -52,7 +52,8 @@
                 <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                     <div class="login-brand" style="margin-top: 0">
                         {{--<strong>Safety</strong> Cubic--}}
-                        <img src="{{asset('/storage/core/img/institutional/logo.png')}}" alt="logo" width="70%" class="shadow-light rounded-circle">
+                        {{--<img src="{{asset('/storage/core/img/institutional/logo.png')}}" alt="logo" width="70%" class="shadow-light rounded-circle">--}}
+                        <img src="{{asset('/storage/core/img/institutional/safetycubic.png')}}">
                     </div>
 
                     @component('core::components.theme-stisla.alerts.sweetalert')@endcomponent

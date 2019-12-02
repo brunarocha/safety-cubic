@@ -34,9 +34,11 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        /*return $this->subject($this->data['cod_clc'] . ' has be merged - Nextem' )
-            ->view('emails.merged')
-            ->with(array('data' => $this->data));*/
+//        $data['subject'] = 'Assunto tese';
+//        $data['name'] = 'Bruna Rocha';
+//        $data['email'] = 'brunas3r@gmail.com';
+//        $data['message'] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ante id felis commodo interdum. Ut sapien orci, porttitor ut purus et, dapibus viverra dolor. Duis eget porta justo. Praesent et porta ligula. Curabitur a tellus eleifend nibh rutrum placerat. Fusce quis metus vulputate, imperdiet nisi et, dignissim neque. Nulla quis hendrerit sapien. Aenean non risus ut sem rutrum luctus at in metus. Sed a libero eget nisi pellentesque ullamcorper. Sed ut turpis mattis, viverra tortor vel, laoreet ex.';
+
         return $this->subject($this->data['subject'] . ' - Safety Cubic Contato')
             ->from('info@safetycubic.com.br', 'Safety Cubic - Contato')
             ->view('institutional::institutional.mail.contact')

@@ -62,6 +62,7 @@
 
 <!-- General JS Scripts -->
 <script src="{{asset('themes/stisla/modules/jquery.min.js')}}"></script>
+<script src="{{asset('core/js/jquery.mask/jquery.mask.min.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/popper.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/tooltip.js')}}"></script>
 <script src="{{asset('themes/stisla/modules/bootstrap/js/bootstrap.min.js')}}"></script>
