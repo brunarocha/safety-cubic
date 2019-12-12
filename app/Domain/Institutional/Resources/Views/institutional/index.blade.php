@@ -144,7 +144,7 @@
             'text'  => '', //trans('institutional::institutional.text_training'),
             'additional_class' => 'style-testimonials wow fadeInUp',
         ])
-            <div class="owl-carousel testimonials-carousel" {{--style="padding: 0"--}}>
+            <div class="owl-carousel testimonials-carousel">
                 @foreach($trainings_categories as $training)
                     <div class="testimonial-item" {{--style="width: 40%;"--}}>
                         <a href="{{route('institutional.training.index',  config('app.locale') == 'en' ? $training->name_slug_en : $training->name_slug_pt_br )}}">
@@ -152,10 +152,26 @@
                             <h3>{{$training->name_pt_br}}</h3>
                         </a>
                     </div>
-                @endforeach
+                    @endforeach
+                </div>
+        @endcomponent
+        <!-- #training -->
+
+        <!--==========================
+          Clients Section
+        ============================-->
+        @component('core::components.theme-reveal.section', [
+            'id'    => 'partners',
+            'title' => trans('institutional::menu.partners'),
+            'additional_class' => 'style-testimonials  wow fadeInUp',
+        ])
+            <div class="owl-item active" style="width: 230px; ">
+                <div class="testimonial-item" style="min-height: 200px; padding: 10px;">
+                    <img src="{{asset('storage/core/img/partners/protecsolutions.png')}}"  style="width: 100%; height: 100%" alt="">
+                </div>
             </div>
-    @endcomponent
-    <!-- #training -->
+        @endcomponent
+        <!-- #clients -->
 
 
         {{--<!--==========================
