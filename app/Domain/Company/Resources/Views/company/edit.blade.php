@@ -130,12 +130,12 @@
                                         'class_col' => 'col-12 col-md-4 col-lg-3',
                                     ])@endcomponent
                                 </div>
-
                             </div>
 
-                            <div class="card-footer text-left">
-                                <button class="btn btn-primary">{{trans('company::form.label_edit')}} </button>
-                            </div>
+                            @component('core::components.theme-stisla.form.footer', [
+                                'btn_back_route'   => route('dashboard.index'),
+                                'btn_submit_title' => 'Editar Empresa'
+                            ])@endcomponent
                         </div>
                     </div>
                 </div>

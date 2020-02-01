@@ -80,7 +80,6 @@ class PublicationController extends Controller {
         return view('institutional::institutional.publication.index')->with([
             'menus'         => $this->menus->all(),
             'trainings_categories' => $this->trainingsCategories->all(),
-            //'trainings'     => $this->trainings->allByCategories($name),
             'company'       => $this->company->show(1),
             'about'         => $this->institutional->about(),
             'publications'  => $publications,
@@ -89,10 +88,10 @@ class PublicationController extends Controller {
 
     public function show($id)
     {
-        $training = $this->trainings->show($id);
+        $publication = $this->publications->show($id);
 
-        return view('institutional::institutional.training.show')->with([
-            'training' => $training,
+        return view('institutional::institutional.publication.show')->with([
+            'publication' => $publication,
             'menus'         => $this->menus->all(),
             'trainings_categories' => $this->trainingsCategories->all(),
             'company'       => $this->company->show(1),

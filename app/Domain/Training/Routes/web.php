@@ -15,11 +15,12 @@
         'show'   => 'trainings.show',
     ]);*/
 
-    Route::resource('treinamentos', 'Training\Admin\TrainingController')->names([
+    Route::resource('institucional/treinamentos', 'Training\Admin\TrainingController')->names([
         'index'  => 'admin.trainings.index',
         'create' => 'admin.trainings.create',
         'store'  => 'admin.trainings.store',
         'edit'   => 'admin.trainings.edit',
+        'update' => 'admin.trainings.update',
         'delete' => 'admin.trainings.delete',
         'show'   => 'admin.trainings.show',
     ]);

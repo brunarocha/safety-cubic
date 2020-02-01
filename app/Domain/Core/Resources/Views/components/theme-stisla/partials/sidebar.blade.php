@@ -15,7 +15,7 @@
                     'icon_class' => 'far fa-file-alt',
                     'links'      => [
                         ['title' => 'Empresa',      'link' => route('company.edit', 1),         'active' => request()->is('/cadastros/empresa') || request()->is('/cadastros/empresa/*')],
-                        ['title' => 'Videos',       'link' => '#',                              'active' => false],
+                        //['title' => 'Videos',       'link' => '#',                              'active' => false],
                         ['title' => 'Treinamentos', 'link' => route('admin.trainings.index'),   'active' => request()->is('/cadastros/treinamentos') || request()->is('/cadastros/treinamentos/*')],
                     ]
                 ]) @endcomponent

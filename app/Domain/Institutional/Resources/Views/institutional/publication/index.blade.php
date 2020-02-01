@@ -35,13 +35,13 @@
                                 <div class="article-image" data-background="assets/img/news/img13.jpg">
                                 </div>
                             </div>--}}
-                            <div class="article-details">
+                            <div class="article-details" style="min-height: 280px">
                                 <div class="article-category">
                                     <a href="#">News</a>
                                     <div class="bullet"></div>
                                     <a href="#">
                                         @php
-                                            $diff = date_diff(date_create($publication->date), date_create(date('Y-m-d')));
+                                            $diff = date_diff(date_create($publication->created_at), date_create(date('Y-m-d')));
                                             $days = $diff->format('%a');
                                         @endphp
 
@@ -54,32 +54,25 @@
                                     </a>
                                 </div>
                                 <div class="article-title">
-                                    {{--<h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>--}}
-                                    <h2><a href="#" style="color: #0c2e8a">{{$publication->title}}</a></h2>
+                                    <h2><a href="{{route('institutional.publication.show', $publication->id)}}" style="color: #0c2e8a">{{$publication->title}}</a></h2>
                                 </div>
-                                {{--<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. </p>--}}
-                                {{--<p> {!! substr($publication->publication, 0, 100) !!} </p>--}}
-                                {{--<p> {{ substr($publication->publication, 0, 150) }} </p>--}}
-                                {{--<p> {{htmlspecialchars(substr($publication->publication, 0, 150))  }} </p>--}}
 
-                                <p> {{substr(strip_tags($publication->publication), 0, 150).'...'}} </p>
+                                <p style="min-height: 150px; margin-bottom:10px"> {{substr(strip_tags($publication->publication), 0, 200).'...'}} </p>
 
-                                <div class="article-user">
+                                <div class="article-user" style="margin-top: 5px">
                                     {{--<img alt="image" src="assets/img/avatar/avatar-1.png">--}}
                                     <div class="article-user-details">
                                         <div class="user-detail-name">
-                                            {{--<a href="#" style="color: #0c2e8a">{{$publication->user->name}}</a>--}}
-                                            <label href="#" style="color: #0c2e8a">{{$publication->user->name}}</label>
+                                            <label style="color: #0c2e8a">{{$publication->user->name}}</label>
+                                            <div class="text-job">Autor</div>
                                         </div>
-                                        {{--<div class="text-job">Web Developer</div>--}}
+
                                     </div>
                                 </div>
                             </div>
                         </article>
                     </div>
                 @endforeach
-
             </div>
 
         @endif

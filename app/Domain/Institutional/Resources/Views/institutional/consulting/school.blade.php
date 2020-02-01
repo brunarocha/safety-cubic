@@ -54,10 +54,26 @@
                 </div>
 
 
+
             </div>
 
         </div>
 
+        {{--<div class="text-center embed-responsive embed-responsive-16by9">
+            <iframe src="{{asset('/storage/core/videos/consultoria-escolas.mp4')}}" class=" text-center embed-responsive-item" frameborder="0" style="border:0; max-width: 800px; max-height: 450px; margin: 0 auto; display: block;" allowfullscreen></iframe>
+        </div>--}}
+
+        <div class="row">
+            <div class="col-lg-2 col-sm-2 col-xs-2"></div>
+            <div class="col-lg-8 col-sm-8 col-xs-8">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="{{asset('/storage/core/videos/consultoria-escolas.mp4')}}" class="embed-responsive-item" frameborder="0" style="border:0; max-width: 800px; max-height: 450px;" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-2 col-xs-2"></div>
+        </div>
+
+        <br><br><br>
         <div class="clearfix"></div>
     @endcomponent
 

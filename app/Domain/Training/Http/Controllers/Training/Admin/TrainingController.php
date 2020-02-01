@@ -58,12 +58,18 @@ class TrainingController extends Controller {
 
     public function edit($id)
     {
+        $categories = $this->categories->all();
+        $training   = $this->trainings->show($id);
 
+        return view('training::training.admin.edit')->with(['categories' => $categories, 'training' => $training]);
     }
 
     public function update(Request $request, $id)
     {
+        $this->trainings->update($request->all(), $id);
 
+        return view('training::training.admin.edit')->with(['categories' => $categories, 'training' => $training]);
+        dd($request->all());
     }
 
     public function delete($id)

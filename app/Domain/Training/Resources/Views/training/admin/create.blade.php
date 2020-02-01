@@ -117,12 +117,12 @@
                                    'class_col' => 'col-12 col-md-6 col-lg-6',
                                ])@endcomponent
                             </div>
-
                         </div>
 
-                        <div class="card-footer text-left">
-                            <button class="btn btn-primary">Cadastrar Treinamento </button>
-                        </div>
+                        @component('core::components.theme-stisla.form.footer', [
+                            'btn_back_route'   => route('admin.trainings.index'),
+                            'btn_submit_title' => 'Cadastrar Treinamento'
+                        ])@endcomponent
                     </div>
                 </div>
             </div>

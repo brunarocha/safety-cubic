@@ -25,9 +25,9 @@
                     <div class="card-header">
                         <h4>Treinamentos</h4>
 
-                        <div class="card-header-action">
+                        {{--<div class="card-header-action">
                             <a href="{{route('admin.trainings.create')}}" class="btn btn-primary"> Cadastrar Treinamento </a>
-                        </div>
+                        </div>--}}
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -46,7 +46,10 @@
                                             <td>{{$training->name_pt_br}}</td>
                                             <td>{{$training->category->name_pt_br}}</td>
                                             <td>{{$training->course_load}}</td>
-                                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                            <td>
+                                                {{--<a href="#" class="btn btn-secondary">Detail</a>--}}
+                                                <a href="{{route('admin.trainings.edit', $training->id)}}" class="btn btn-primary">Editar</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

@@ -6,14 +6,6 @@
             margin-top: 5%;
         }
 
-        /*.section-teste {
-            width: 100%;
-            height: 60vh;
-            position: relative;
-            background-size: cover;
-            background: url({{asset('core/img/institutional/carousel.png')}}) no-repeat;
-        }*/
-
     </style>
 @endsection
 
@@ -57,7 +49,7 @@
                     </li>
 
                     <li class="text-justify"><i class="ion-android-checkmark-circle"></i>
-                        Auditorias Internas baseadas de SGI (ISO 9001 / ISO 14001 / OHSAS 18001 / ISSO 45001)
+                        Auditorias Internas baseadas de SGI (ISO 9001 / ISO 14001 / OHSAS 18001 / ISO 45001)
                     </li>
 
                     <li class="text-justify"><i class="ion-android-checkmark-circle"></i>

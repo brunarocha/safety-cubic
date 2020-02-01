@@ -10,22 +10,22 @@
     ]) @endcomponent
 
     <div class="row">
-
         @foreach($trainings as $training)
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4> <a href="{{route('student.trainings.show', $training->id)}}">{{$training->name_pt_br}}</a></h4>
+                        <h4>
+                            <a href="{{route('student.trainings.show', $training->id)}}" style="font-size: 14px"> {{$training->name_pt_br}}</a>
+                        </h4>
                     </div>
                     <div class="card-body">
-                        This is some text within a card body.
-                        Instructor
+                        Instrutor: Fulano da Silva
                     </div>
-                    <div class="card-footer">
+                    {{--<div class="card-footer">
                         <div class="progress mb-3">
                             <div class="progress-bar" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                         </div>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
         @endforeach

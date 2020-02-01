@@ -66,13 +66,11 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>Safety Cubic</strong> 2019. All Rights Reserved
+                &copy; Copyright <strong>Safety Cubic</strong> {{date('Y')}}. All Rights Reserved
             </div>
             <div class="credits">
                 Developed by <strong>ProTec Solutions - Tecnologia & Segurança</strong>
                 <br>
-                {{--Theme by <a href="https://bootstrapmade.com/">BootstrapMade</a>--}}
-                Theme by BootstrapMade
             </div>
         </div>
     </footer>

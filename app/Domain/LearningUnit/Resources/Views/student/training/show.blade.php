@@ -18,7 +18,10 @@
                         <i class="fas fa-cog"></i>
                     </div>
                     <div class="card-body">
-                        <h4>{{trans('learning-unit::training.label_courseware')}}</h4>
+                        <h4>
+                            <a href="{{route('student.trainings.material.index', $training->id)}}">
+                                {{trans('learning-unit::training.label_courseware')}}</a>
+                        </h4>
                         <p>General settings such as, site title, site description, address and so on.</p>
                         <a href="features-setting-detail.html" class="card-cta">Change Setting <i class="fas fa-chevron-right"></i></a>
                     </div>

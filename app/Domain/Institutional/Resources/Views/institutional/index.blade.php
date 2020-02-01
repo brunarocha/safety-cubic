@@ -34,6 +34,20 @@
 
     </section>
     <!-- #intro -->
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center text-lg-left">
+                    <h3 class="cta-title text-center" style="margin-bottom: 10px">Invista em valores pessoais e transforme culturas operacionais</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- #call-to-action -->
 
     <main id="main">
 
@@ -247,16 +261,17 @@
 
                 <div class="row contact-info">
 
-                    <div class="col-md-4">
+                    {{--<div class="col-md-4">
                         <div class="contact-address">
                             <i class="ion-ios-location-outline"></i>
                             <h3>{{trans('institutional::institutional.address')}}</h3>
                             <address>{{$company->present()->fullAddress}}</address>
                         </div>
-                    </div>
+                    </div>--}}
+                    <div class="col-md-2"></div>
 
                     <div class="col-md-4">
-                        <div class="contact-phone">
+                        <div class="contact-phone" style="border-left: 0px">
                             <i class="ion-ios-telephone-outline"></i>
                             <h3>{{trans('institutional::institutional.phone_number')}}</h3>
                             <p>{{$company->phone}}</p>
@@ -271,12 +286,14 @@
                         </div>
                     </div>
 
+                    <div class="col-md-2"></div>
+
                 </div>
             </div>
 
-            <div class="container mb-4">
+            {{--<div class="container mb-4">
                 <iframe src="{{$company->url_google_maps}}" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+            </div>--}}
 
             <div class="container">
                 <div class="form">
