@@ -42,15 +42,9 @@
                     Preservação do Meio Ambiente e Segurança Patrimonial (HSSE)
                 </p>
 
-                 @component('core::components.theme-reveal.img', [
-                    'url'   => '/storage/core/img/institutional/consulting_school.png',
-                    'class' => 'img-fluid',
-                    'with_div_class' => 'text-center',
-                ])@endcomponent
-
 
                 <div class="text-center" style="margin-top: 3%; margin-bottom: 5%">
-                    <a href="{{asset('/storage/core/files/institutional/FOLDER_-_Plano_de_Respostas_Emergencia.pdf')}}" download="FOLDER_-_Plano_de_Respostas_Emergencia.pdf" class="text-center" style="color: #0c2e8a">Clique aqui para fazer download do Folder</a>
+                    <a href="{{asset('/storage/core/files/institutional/FOLDER_ESCOLAS_-_SAFETYCUBIC.pdf')}}" download="FOLDER_ESCOLAS_-_SAFETYCUBIC" class="text-center" style="color: #0c2e8a">Clique aqui para fazer download do Folder</a>
                 </div>
 
 
@@ -59,18 +53,11 @@
 
         </div>
 
-        {{--<div class="text-center embed-responsive embed-responsive-16by9">
-            <iframe src="{{asset('/storage/core/videos/consultoria-escolas.mp4')}}" class=" text-center embed-responsive-item" frameborder="0" style="border:0; max-width: 800px; max-height: 450px; margin: 0 auto; display: block;" allowfullscreen></iframe>
-        </div>--}}
-
-        <div class="row">
-            <div class="col-lg-2 col-sm-2 col-xs-2"></div>
-            <div class="col-lg-8 col-sm-8 col-xs-8">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="{{asset('/storage/core/videos/consultoria-escolas.mp4')}}" class="embed-responsive-item" frameborder="0" style="border:0; max-width: 800px; max-height: 450px;" allowfullscreen></iframe>
-                </div>
+        <div style="max-width: 640px;max-height: 352px; margin:auto;">
+            <div class="embed-responsive embed-responsive-16by9" style="max-height: 352px;">
+                <iframe src="{{asset('/storage/core/videos/consultoria-escolas.mp4')}}" class="embed-responsive-item"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <div class="col-lg-2 col-sm-2 col-xs-2"></div>
         </div>
 
         <br><br><br>
